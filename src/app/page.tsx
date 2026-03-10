@@ -1,5 +1,6 @@
 import Link from "next/link";
 import EventsCarousel from "@/components/EventsCarousel";
+import LatestSermon from "@/components/LatestSermon";
 
 export default function Home() {
   return (
@@ -75,50 +76,7 @@ export default function Home() {
       </section>
 
       {/* Latest Sermon */}
-      <section className="py-20 bg-primary-dark text-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
-                Sermon
-              </h2>
-              <div className="section-divider !mx-0 mb-6" />
-              <p className="text-secondary font-semibold text-lg mb-4">
-                Watch Us Live &mdash; Sunday&apos;s 11AM
-              </p>
-              <p className="text-gray-300 leading-relaxed mb-8">
-                Join others as we listen to the lively messages of Nick Manzie, a
-                down-to-earth pastor who communicates God&apos;s truth in
-                understandable and practical terms, as you apply the Bible to your
-                own life.
-              </p>
-              <a
-                href="https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-secondary text-primary-dark px-6 py-3 rounded font-bold hover:bg-secondary-light transition-colors duration-200"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z" />
-                </svg>
-                View Past Sermons
-              </a>
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-2xl">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/23x8yM4mvvw"
-                title="Latest Sermon - Central Baptist Church"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="aspect-video w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <LatestSermon />
 
       {/* Service Times */}
       <section className="py-20 bg-white">
