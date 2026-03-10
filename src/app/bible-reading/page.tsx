@@ -49,36 +49,24 @@ export default function BibleReading() {
             {plans.map((plan) => (
               <div
                 key={plan.title}
-                className="bg-light rounded-lg p-8 md:p-10 flex flex-col md:flex-row items-start gap-6 hover:shadow-lg transition-shadow duration-300"
+                className="bg-light rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-start gap-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shrink-0">
-                  <svg
-                    className="w-8 h-8 text-secondary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={plan.icon}
-                    />
+                  <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={plan.icon} />
                   </svg>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-3">
                     {plan.title}
                   </h3>
-                  <p className="text-gray-warm leading-relaxed">
-                    {plan.description}
-                  </p>
+                  <p className="text-gray-warm leading-relaxed">{plan.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 bg-primary text-white rounded-lg p-10 text-center">
+          <div className="mt-16 bg-primary text-white rounded-xl p-10 text-center">
             <h2 className="text-2xl font-bold font-[family-name:var(--font-playfair)] mb-4">
               Start Reading Today
             </h2>

@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import Image from "next/image";
 
 export const metadata = {
   title: "Our Ministries - Central Baptist Church",
@@ -68,54 +69,58 @@ export default function OurMinistries() {
     <>
       <PageHero
         title="Our Ministries"
-        subtitle="Providing a wide range of programs and activities for children, youth, and adults"
+        subtitle="Programs and activities for children, youth, and adults"
       />
 
+      {/* Intro with Image */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-lg text-gray-warm leading-relaxed">
-              At Central Baptist Church, we strive to be a community of faith
-              banded together by our love, mission, and purpose to proclaim the
-              gospel of Jesus Christ. Our ministries provide opportunities for
-              every member to grow, serve, and connect.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <p className="text-lg text-gray-warm leading-relaxed mb-6">
+                At Central Baptist Church, we strive to be a community of faith
+                banded together by our love, mission, and purpose to proclaim the
+                gospel of Jesus Christ.
+              </p>
+              <p className="text-lg text-gray-warm leading-relaxed">
+                Our ministries provide opportunities for every member to grow,
+                serve, and connect in a safe and welcoming environment for people
+                of all ages and backgrounds.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/Ministry-Collage.jpg"
+                alt="Church ministries"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ministries.map((ministry) => (
               <div
                 key={ministry.title}
-                className="bg-light rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 group"
+                className="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 group"
               >
                 <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5 group-hover:bg-accent transition-colors duration-300">
-                  <svg
-                    className="w-7 h-7 text-secondary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={ministry.icon}
-                    />
+                  <svg className="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ministry.icon} />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-3">
                   {ministry.title}
                 </h3>
-                <p className="text-gray-warm leading-relaxed text-sm">
-                  {ministry.description}
-                </p>
+                <p className="text-gray-warm leading-relaxed text-sm">{ministry.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact for Ministries */}
+      {/* CTA */}
       <section className="py-16 bg-primary text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] mb-4">

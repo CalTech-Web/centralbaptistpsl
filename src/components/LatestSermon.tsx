@@ -24,19 +24,38 @@ export default async function LatestSermon() {
   return (
     <section className="py-20 bg-primary-dark text-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
-              Latest Sermon
-            </h2>
-            <div className="section-divider !mx-0 mb-6" />
-            {videoId && (
-              <p className="text-secondary font-semibold text-lg mb-4">
-                {title}
-              </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
+            Latest Sermon
+          </h2>
+          <div className="section-divider mb-4" />
+          {videoId && (
+            <p className="text-secondary font-semibold text-lg">{title}</p>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+          <div className="lg:col-span-3 rounded-xl overflow-hidden shadow-2xl">
+            {videoId ? (
+              <iframe
+                width="100%"
+                height="400"
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="aspect-video w-full"
+              />
+            ) : (
+              <div className="aspect-video w-full bg-primary flex items-center justify-center rounded-xl">
+                <p className="text-gray-400">Sermon video coming soon</p>
+              </div>
             )}
+          </div>
+          <div className="lg:col-span-2">
             <p className="text-gray-300 leading-relaxed mb-4">
-              Watch Us Live &mdash; Sunday&apos;s at 11 AM
+              Watch Us Live on Sundays at 11 AM
             </p>
             <p className="text-gray-300 leading-relaxed mb-8">
               Join others as we listen to the lively messages of Nick Manzie, a
@@ -55,24 +74,6 @@ export default async function LatestSermon() {
               </svg>
               View Past Sermons
             </a>
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-2xl">
-            {videoId ? (
-              <iframe
-                width="100%"
-                height="315"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title={title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="aspect-video w-full"
-              />
-            ) : (
-              <div className="aspect-video w-full bg-primary flex items-center justify-center">
-                <p className="text-gray-400">Sermon video coming soon</p>
-              </div>
-            )}
           </div>
         </div>
       </div>
