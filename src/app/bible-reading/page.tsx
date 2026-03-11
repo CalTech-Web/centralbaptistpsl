@@ -70,7 +70,7 @@ export default function BibleReading() {
             <h2 className="text-2xl font-bold font-[family-name:var(--font-playfair)] mb-4">
               Start Reading Today
             </h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-white/75 mb-6">
               Contact the church office to receive a printed copy of any of
               these reading plans, or visit us on Sunday to pick one up.
             </p>

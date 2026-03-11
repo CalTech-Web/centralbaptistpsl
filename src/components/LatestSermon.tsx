@@ -48,8 +48,8 @@ export default async function LatestSermon() {
                 className="aspect-video w-full"
               />
             ) : (
-              <div className="aspect-video w-full bg-primary-dark flex items-center justify-center rounded-xl">
-                <p className="text-gray-400">Sermon video coming soon</p>
+              <div className="aspect-video w-full bg-primary-light flex items-center justify-center rounded-xl">
+                <p className="text-white/70">Sermon video coming soon</p>
               </div>
             )}
           </div>

@@ -53,7 +53,7 @@ export default function Navbar() {
               href="https://tithe.ly/give?c=1379702"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 bg-primary text-white px-5 py-2.5 rounded text-sm font-bold hover:bg-primary-dark transition-colors duration-200"
+              className="ml-3 bg-primary text-white px-5 py-2.5 rounded text-sm font-bold hover:bg-primary-light transition-colors duration-200"
             >
               Give Online
             </a>
@@ -105,7 +105,7 @@ export default function Navbar() {
               href="https://tithe.ly/give?c=1379702"
               target="_blank"
               rel="noopener noreferrer"
-              className="block mx-4 mt-3 bg-primary text-white px-5 py-2.5 rounded text-sm font-bold text-center hover:bg-primary-dark transition-colors"
+              className="block mx-4 mt-3 bg-primary text-white px-5 py-2.5 rounded text-sm font-bold text-center hover:bg-primary-light transition-colors"
             >
               Give Online
             </a>

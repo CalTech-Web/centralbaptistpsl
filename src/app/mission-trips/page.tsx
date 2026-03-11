@@ -80,11 +80,11 @@ export default function MissionTrips() {
           </div>
 
           {/* Get Involved */}
-          <div className="bg-primary-dark text-white rounded-xl p-10 text-center">
+          <div className="bg-primary text-white rounded-xl p-10 text-center">
             <h2 className="text-2xl font-bold font-[family-name:var(--font-playfair)] mb-4">
               Join Our Next Mission
             </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-white/75 mb-6 max-w-2xl mx-auto">
               We are always looking for volunteers to join us on our mission
               trips. Whether you can serve for a day or a week, your help makes
               a difference.

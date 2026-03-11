@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LatestSermon from "@/components/LatestSermon";
+import EventsCarousel from "@/components/EventsCarousel";
 
 export default function Home() {
   return (
@@ -37,11 +38,24 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary-dark transition-colors duration-200"
+              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
             >
               Plan Your Visit
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events - WHITE */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
+              Upcoming Events
+            </h2>
+            <div className="section-divider" />
+          </div>
+          <EventsCarousel />
         </div>
       </section>
 
@@ -103,7 +117,7 @@ export default function Home() {
               href="https://forms.gle/QRk1FSUSFnjAVumv7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-dark transition-colors"
+              className="inline-block bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors"
             >
               Submit a Prayer Request
             </a>
@@ -111,10 +125,88 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Sermon */}
+      {/* Bible Reading - GREEN */}
+      <section className="bg-green-section py-20">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
+                Read the Bible in a Year
+              </h2>
+              <div className="w-20 h-1 bg-white/60 mb-8" />
+              <p className="text-lg leading-relaxed mb-6 text-white/90">
+                One of the best ways to know God is to become acquainted with the
+                full counsel of His written Word. We offer three 365-day Bible
+                reading plans to help you engage with Scripture throughout the year.
+              </p>
+              <Link
+                href="/bible-reading"
+                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors"
+              >
+                View Reading Plans
+              </Link>
+            </div>
+            <div className="relative rounded-xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/what-we-believe.jpg"
+                alt="Bible reading"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pastor Section - WHITE */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/pastor-1030x771-1-1024x767.jpg"
+                  alt="Dr. Nick Manzie"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
+                  Our Pastor
+                </h2>
+                <div className="section-divider !mx-0 mb-6" />
+                <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
+                  Dr. Nick Manzie
+                </h3>
+                <p className="text-primary font-semibold mb-4">
+                  &ldquo;Brother Nick&rdquo;
+                </p>
+                <p className="text-gray-warm leading-relaxed mb-6">
+                  Dr. Nick Manzie has faithfully led Central Baptist Church since
+                  2003. He began his ministry as a Chaplain with Christian
+                  Motorsports International and has been dedicated to serving the
+                  Port St. Lucie community and guiding our congregation in faith
+                  and worship.
+                </p>
+                <Link
+                  href="/our-story"
+                  className="inline-block text-primary font-bold hover:text-primary-light transition-colors"
+                >
+                  Read More &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Sermon - GREEN */}
       <LatestSermon />
 
-      {/* Service Times - WHITE */}
+      {/* Service Times - CREAM */}
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -206,50 +298,6 @@ export default function Home() {
             <Link href="/our-ministries" className="inline-block bg-white text-primary px-8 py-3 rounded font-bold hover:bg-light transition-colors duration-200">
               Explore Our Ministries
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Pastor Section - WHITE */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="rounded-xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/pastor-1030x771-1-1024x767.jpg"
-                  alt="Dr. Nick Manzie"
-                  width={600}
-                  height={450}
-                  className="w-full h-auto"
-                />
-              </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
-                  Our Pastor
-                </h2>
-                <div className="section-divider !mx-0 mb-6" />
-                <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
-                  Dr. Nick Manzie
-                </h3>
-                <p className="text-primary font-semibold mb-4">
-                  &ldquo;Brother Nick&rdquo;
-                </p>
-                <p className="text-gray-warm leading-relaxed mb-6">
-                  Dr. Nick Manzie has faithfully led Central Baptist Church since
-                  2003. He began his ministry as a Chaplain with Christian
-                  Motorsports International and has been dedicated to serving the
-                  Port St. Lucie community and guiding our congregation in faith
-                  and worship.
-                </p>
-                <Link
-                  href="/our-story"
-                  className="inline-block text-primary font-bold hover:text-primary-light transition-colors"
-                >
-                  Read More &rarr;
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/90 via-primary/80 to-primary-dark/90" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/75 to-primary/90" />
       <div className="relative max-w-7xl mx-auto px-4 py-20 text-center text-white">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-playfair)] mb-4 animate-fade-in-up">
           {title}

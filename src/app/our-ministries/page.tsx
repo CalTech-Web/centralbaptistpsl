@@ -105,7 +105,7 @@ export default function OurMinistries() {
                 key={ministry.title}
                 className="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 group"
               >
-                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5 group-hover:bg-primary-dark transition-colors duration-300">
+                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5 group-hover:bg-primary-light transition-colors duration-300">
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ministry.icon} />
                   </svg>
@@ -126,7 +126,7 @@ export default function OurMinistries() {
           <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] mb-4">
             Want to Get Involved?
           </h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-white/75 mb-6">
             Contact us to learn more about any of our ministries or to find the
             right fit for you and your family.
           </p>
