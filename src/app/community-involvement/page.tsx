@@ -50,7 +50,7 @@ export default function CommunityInvolvement() {
       {/* Community Cards */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-4 text-center">
+          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
             How We Serve
           </h2>
           <div className="section-divider mb-12" />
@@ -80,11 +80,11 @@ export default function CommunityInvolvement() {
             ].map((item) => (
               <div key={item.title} className="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5">
-                  <svg className="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-3">
+                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-warm text-sm leading-relaxed">{item.desc}</p>
@@ -95,7 +95,7 @@ export default function CommunityInvolvement() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-accent text-white text-center">
+      <section className="py-16 bg-green-section text-center">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] mb-4">
             Get Involved Today
@@ -106,7 +106,7 @@ export default function CommunityInvolvement() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-accent px-8 py-3 rounded font-bold hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-primary px-8 py-3 rounded font-bold hover:bg-light transition-colors"
           >
             Contact Us
           </Link>

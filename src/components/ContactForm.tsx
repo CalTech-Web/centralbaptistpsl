@@ -39,7 +39,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-primary-dark mb-1">
+        <label htmlFor="name" className="block text-sm font-semibold text-dark mb-1">
           Name
         </label>
         <input
@@ -47,12 +47,12 @@ export default function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-dark focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition"
+          className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
           placeholder="Your name"
         />
       </div>
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-primary-dark mb-1">
+        <label htmlFor="email" className="block text-sm font-semibold text-dark mb-1">
           Email
         </label>
         <input
@@ -60,12 +60,12 @@ export default function ContactForm() {
           id="email"
           name="email"
           required
-          className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-dark focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition"
+          className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition"
           placeholder="your@email.com"
         />
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-primary-dark mb-1">
+        <label htmlFor="message" className="block text-sm font-semibold text-dark mb-1">
           Message
         </label>
         <textarea
@@ -73,14 +73,14 @@ export default function ContactForm() {
           name="message"
           required
           rows={4}
-          className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-dark focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white text-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition resize-none"
           placeholder="How can we help you?"
         />
       </div>
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full bg-secondary text-primary-dark px-6 py-3 rounded-lg font-bold hover:bg-secondary-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "sending" ? "Sending..." : "Send Message"}
       </button>

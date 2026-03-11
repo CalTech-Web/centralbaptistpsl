@@ -22,15 +22,15 @@ export default async function LatestSermon() {
   const { videoId, title } = await getLatestVideo();
 
   return (
-    <section className="py-20 bg-primary-dark text-white">
+    <section className="bg-green-section py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
             Latest Sermon
           </h2>
-          <div className="section-divider mb-4" />
+          <div className="w-20 h-1 bg-white/60 mx-auto mb-4" />
           {videoId && (
-            <p className="text-secondary font-semibold text-lg">{title}</p>
+            <p className="font-semibold text-lg text-white/90">{title}</p>
           )}
         </div>
 
@@ -48,16 +48,16 @@ export default async function LatestSermon() {
                 className="aspect-video w-full"
               />
             ) : (
-              <div className="aspect-video w-full bg-primary flex items-center justify-center rounded-xl">
+              <div className="aspect-video w-full bg-primary-dark flex items-center justify-center rounded-xl">
                 <p className="text-gray-400">Sermon video coming soon</p>
               </div>
             )}
           </div>
           <div className="lg:col-span-2">
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <p className="text-white/90 leading-relaxed mb-4">
               Watch Us Live on Sundays at 11 AM
             </p>
-            <p className="text-gray-300 leading-relaxed mb-8">
+            <p className="text-white/80 leading-relaxed mb-8">
               Join others as we listen to the lively messages of Nick Manzie, a
               down-to-earth pastor who communicates God&apos;s truth in
               understandable and practical terms, as you apply the Bible to your
@@ -67,7 +67,7 @@ export default async function LatestSermon() {
               href={`https://www.youtube.com/channel/${CHANNEL_ID}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-secondary text-primary-dark px-6 py-3 rounded font-bold hover:bg-secondary-light transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors duration-200"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z" />

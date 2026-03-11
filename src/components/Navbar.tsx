@@ -18,7 +18,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-primary-dark/95 backdrop-blur-sm text-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center gap-3">
@@ -30,10 +30,10 @@ export default function Navbar() {
               className="w-auto h-10"
             />
             <div className="hidden sm:flex flex-col">
-              <span className="text-lg font-bold tracking-wide font-[family-name:var(--font-playfair)]">
+              <span className="text-lg font-bold tracking-wide text-dark font-[family-name:var(--font-playfair)]">
                 Central Baptist Church
               </span>
-              <span className="text-xs text-secondary tracking-widest uppercase">
+              <span className="text-xs text-primary tracking-widest uppercase">
                 Port St. Lucie, FL
               </span>
             </div>
@@ -44,7 +44,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium hover:text-secondary transition-colors duration-200 rounded"
+                className="px-3 py-2 text-sm font-medium text-dark hover:text-primary transition-colors duration-200 rounded"
               >
                 {link.label}
               </Link>
@@ -53,7 +53,7 @@ export default function Navbar() {
               href="https://tithe.ly/give?c=1379702"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 bg-secondary text-primary-dark px-5 py-2.5 rounded text-sm font-bold hover:bg-secondary-light transition-colors duration-200"
+              className="ml-3 bg-primary text-white px-5 py-2.5 rounded text-sm font-bold hover:bg-primary-dark transition-colors duration-200"
             >
               Give Online
             </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden p-2 rounded hover:bg-primary-light transition-colors"
+            className="xl:hidden p-2 rounded text-dark hover:bg-light transition-colors"
             aria-label="Toggle menu"
           >
             <svg
@@ -90,13 +90,13 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="xl:hidden pb-4 border-t border-primary-light/30">
+          <div className="xl:hidden pb-4 border-t border-gray-200">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-3 text-sm hover:bg-primary-light/20 hover:text-secondary transition-colors rounded"
+                className="block px-4 py-3 text-sm text-dark hover:bg-primary/10 hover:text-primary transition-colors rounded"
               >
                 {link.label}
               </Link>
@@ -105,7 +105,7 @@ export default function Navbar() {
               href="https://tithe.ly/give?c=1379702"
               target="_blank"
               rel="noopener noreferrer"
-              className="block mx-4 mt-3 bg-secondary text-primary-dark px-5 py-2.5 rounded text-sm font-bold text-center hover:bg-secondary-light transition-colors"
+              className="block mx-4 mt-3 bg-primary text-white px-5 py-2.5 rounded text-sm font-bold text-center hover:bg-primary-dark transition-colors"
             >
               Give Online
             </a>

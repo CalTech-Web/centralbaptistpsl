@@ -61,19 +61,19 @@ export default function OurStory() {
       {/* History Timeline */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-4 text-center">
+          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
             History
           </h2>
           <div className="section-divider mb-12" />
 
-          <div className="relative border-l-4 border-secondary pl-8 space-y-10">
+          <div className="relative border-l-4 border-primary pl-8 space-y-10">
             {timeline.map((event) => (
               <div key={event.year} className="relative">
-                <div className="absolute -left-[2.85rem] top-1 w-5 h-5 bg-secondary rounded-full border-4 border-white" />
-                <span className="text-secondary font-bold text-sm tracking-wider uppercase">
+                <div className="absolute -left-[2.85rem] top-1 w-5 h-5 bg-primary rounded-full border-4 border-white" />
+                <span className="text-primary font-bold text-sm tracking-wider uppercase">
                   {event.year}
                 </span>
-                <h3 className="text-xl font-bold text-primary-dark mt-1 mb-2 font-[family-name:var(--font-playfair)]">
+                <h3 className="text-xl font-bold text-dark mt-1 mb-2 font-[family-name:var(--font-playfair)]">
                   {event.title}
                 </h3>
                 <p className="text-gray-warm leading-relaxed text-lg">{event.text}</p>
@@ -86,7 +86,7 @@ export default function OurStory() {
       {/* Pastor Section */}
       <section className="py-20 bg-light">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-4 text-center">
+          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
             Our Pastor
           </h2>
           <div className="section-divider mb-12" />
@@ -102,10 +102,10 @@ export default function OurStory() {
               />
             </div>
             <div>
-              <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-1">
+              <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
                 Dr. Nick Manzie
               </h3>
-              <p className="text-secondary font-semibold italic mb-6">
+              <p className="text-primary font-semibold italic mb-6">
                 &ldquo;Brother Nick&rdquo; &mdash; Senior Pastor since 2003
               </p>
               <p className="text-gray-warm leading-relaxed text-lg mb-4">
@@ -120,13 +120,13 @@ export default function OurStory() {
               <div className="space-y-1 text-sm text-gray-warm">
                 <p>
                   <span className="font-semibold">Email:</span>{" "}
-                  <a href="mailto:nickmanzie@centralbaptistpsl.com" className="text-primary hover:text-secondary transition-colors">
+                  <a href="mailto:nickmanzie@centralbaptistpsl.com" className="text-primary hover:text-primary transition-colors">
                     nickmanzie@centralbaptistpsl.com
                   </a>
                 </p>
                 <p>
                   <span className="font-semibold">Phone:</span>{" "}
-                  <a href="tel:7722492463" className="text-primary hover:text-secondary transition-colors">
+                  <a href="tel:7722492463" className="text-primary hover:text-primary transition-colors">
                     (772) 249-2463
                   </a>
                 </p>
@@ -139,7 +139,7 @@ export default function OurStory() {
       {/* Staff Section */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-4 text-center">
+          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
             Our Staff
           </h2>
           <div className="section-divider mb-12" />
@@ -155,10 +155,10 @@ export default function OurStory() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-1">
+                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
                   Dr. Nick Manzie
                 </h3>
-                <p className="text-secondary text-sm font-semibold">Senior Pastor</p>
+                <p className="text-primary text-sm font-semibold">Senior Pastor</p>
               </div>
             </div>
 
@@ -172,12 +172,12 @@ export default function OurStory() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-1">
+                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
                   Don Reid
                 </h3>
-                <p className="text-secondary text-sm font-semibold mb-2">Missions Pastor</p>
+                <p className="text-primary text-sm font-semibold mb-2">Missions Pastor</p>
                 <p className="text-xs text-gray-warm">
-                  <a href="mailto:donreid@centralbaptistpsl.com" className="hover:text-secondary transition-colors">
+                  <a href="mailto:donreid@centralbaptistpsl.com" className="hover:text-primary transition-colors">
                     donreid@centralbaptistpsl.com
                   </a>
                 </p>
@@ -194,12 +194,12 @@ export default function OurStory() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-1">
+                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
                   Jessica Manzie
                 </h3>
-                <p className="text-secondary text-sm font-semibold mb-2">Director of Children &amp; Youth</p>
+                <p className="text-primary text-sm font-semibold mb-2">Director of Children &amp; Youth</p>
                 <p className="text-xs text-gray-warm">
-                  <a href="mailto:cbcpslstudentministry@gmail.com" className="hover:text-secondary transition-colors">
+                  <a href="mailto:cbcpslstudentministry@gmail.com" className="hover:text-primary transition-colors">
                     cbcpslstudentministry@gmail.com
                   </a>
                 </p>

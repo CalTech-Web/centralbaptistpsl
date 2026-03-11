@@ -21,7 +21,7 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto animate-fade-in-up-delay">
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto animate-fade-in-up-delay">
             {subtitle}
           </p>
         )}

@@ -105,12 +105,12 @@ export default function OurMinistries() {
                 key={ministry.title}
                 className="bg-light rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 group"
               >
-                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5 group-hover:bg-accent transition-colors duration-300">
-                  <svg className="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5 group-hover:bg-primary-dark transition-colors duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ministry.icon} />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-3">
+                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-3">
                   {ministry.title}
                 </h3>
                 <p className="text-gray-warm leading-relaxed text-sm">{ministry.description}</p>
@@ -133,7 +133,7 @@ export default function OurMinistries() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:centralbaptist2018@gmail.com"
-              className="bg-secondary text-primary-dark px-8 py-3 rounded font-bold hover:bg-secondary-light transition-colors"
+              className="bg-white text-primary px-8 py-3 rounded font-bold hover:bg-light transition-colors"
             >
               Email Us
             </a>

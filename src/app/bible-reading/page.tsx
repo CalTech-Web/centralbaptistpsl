@@ -52,12 +52,12 @@ export default function BibleReading() {
                 className="bg-light rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-start gap-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={plan.icon} />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-primary-dark mb-3">
+                  <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-3">
                     {plan.title}
                   </h3>
                   <p className="text-gray-warm leading-relaxed">{plan.description}</p>
@@ -76,7 +76,7 @@ export default function BibleReading() {
             </p>
             <a
               href="mailto:centralbaptist2018@gmail.com"
-              className="inline-block bg-secondary text-primary-dark px-8 py-3 rounded font-bold hover:bg-secondary-light transition-colors"
+              className="inline-block bg-white text-primary px-8 py-3 rounded font-bold hover:bg-light transition-colors"
             >
               Request a Reading Plan
             </a>
