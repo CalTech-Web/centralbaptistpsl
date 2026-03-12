@@ -155,16 +155,111 @@ export default function EventsPage() {
       </section>
       </ScrollReveal>
 
-      {/* Service Times */}
-      <ServiceTimesSection variant="green" />
+      {/* Weekly Schedule - GREEN */}
+      <section className="bg-green-section py-20 relative overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
+              Every Week
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
+              Weekly Schedule
+            </h2>
+            <div className="w-20 h-1 bg-white/60 mx-auto mb-6" />
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              In addition to special events, we gather regularly for worship,
+              study, and fellowship. All are welcome.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Sunday Card */}
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-gradient-to-r from-primary-dark to-dark px-8 py-5 text-center">
+                <div className="flex items-center justify-center gap-3">
+                  <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                  <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-white">Sunday</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="space-y-4 text-gray-warm">
+                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                    <div>
+                      <span className="font-semibold text-dark block">Sunday School</span>
+                      <span className="text-sm text-gray-warm">All ages welcome</span>
+                    </div>
+                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">9:30 AM</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                    <div>
+                      <span className="font-semibold text-dark block">Morning Worship</span>
+                      <span className="text-sm text-gray-warm">Main service</span>
+                    </div>
+                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">11:00 AM</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <span className="font-semibold text-dark block">Evening Worship</span>
+                      <span className="text-sm text-gray-warm">Evening fellowship</span>
+                    </div>
+                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">6:00 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Wednesday Card */}
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-gradient-to-r from-primary-dark to-dark px-8 py-5 text-center">
+                <div className="flex items-center justify-center gap-3">
+                  <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-white">Wednesday</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="space-y-4 text-gray-warm">
+                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                    <div>
+                      <span className="font-semibold text-dark block">Prayer Meeting</span>
+                      <span className="text-sm text-gray-warm">Gather in prayer</span>
+                    </div>
+                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">6:30 PM</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                    <div>
+                      <span className="font-semibold text-dark block">Kids Bible Study</span>
+                      <span className="text-sm text-gray-warm">5K&ndash;5th Grade</span>
+                    </div>
+                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
+                    <div>
+                      <span className="font-semibold text-dark block">Youth Bible Study</span>
+                      <span className="text-sm text-gray-warm">6th&ndash;12th Grade</span>
+                    </div>
+                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <span className="font-semibold text-dark block">Adult Bible Study</span>
+                      <span className="text-sm text-gray-warm">In-depth study</span>
+                    </div>
+                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Ways to Connect - CREAM */}
       <ScrollReveal>
       <section className="py-20 bg-light relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
-        </div>
-
         <div className="relative max-w-5xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -259,15 +354,6 @@ export default function EventsPage() {
       {/* CTA - GREEN */}
       <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute top-6 left-[8%] w-16 h-16 text-white/[0.07] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" />
-          </svg>
-          <svg className="absolute bottom-8 right-[10%] w-14 h-14 text-white/[0.06] animate-icon-bounce" style={{ animationDelay: '0.5s' }} fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </div>
-
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
             Join Us This Sunday
