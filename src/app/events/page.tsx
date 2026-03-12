@@ -177,7 +177,7 @@ export default function EventsPage() {
             <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-5 text-center">
                 <div className="flex items-center justify-center gap-3">
-                  <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-white/80 animate-spin-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                   <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-white">Sunday</h3>
@@ -214,7 +214,7 @@ export default function EventsPage() {
             <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-5 text-center">
                 <div className="flex items-center justify-center gap-3">
-                  <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-white/80 animate-page-turn" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                   <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-white">Wednesday</h3>
@@ -260,6 +260,10 @@ export default function EventsPage() {
       {/* Ways to Connect - CREAM */}
       <ScrollReveal>
       <section className="py-24 bg-light relative overflow-hidden">
+        {/* Decorative background blobs */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-primary/[0.04] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/[0.03] rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+
         <div className="relative max-w-5xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -275,7 +279,8 @@ export default function EventsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ScrollReveal stagger>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
             {[
               {
                 title: "Watch Online",
@@ -284,6 +289,9 @@ export default function EventsPage() {
                 href: "https://www.youtube.com/@CBCPSL/streams",
                 label: "Watch Live",
                 external: true,
+                color: "text-red-500",
+                bg: "bg-red-50",
+                border: "border-red-200",
               },
               {
                 title: "Prayer Request",
@@ -292,6 +300,9 @@ export default function EventsPage() {
                 href: "https://forms.gle/QRk1FSUSFnjAVumv7",
                 label: "Submit Request",
                 external: true,
+                color: "text-blue-500",
+                bg: "bg-blue-50",
+                border: "border-blue-200",
               },
               {
                 title: "Visit Us",
@@ -300,15 +311,18 @@ export default function EventsPage() {
                 href: "/contact",
                 label: "Get Directions",
                 external: false,
+                color: "text-emerald-500",
+                bg: "bg-emerald-50",
+                border: "border-emerald-200",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1 flex flex-col"
+                className={`group bg-white rounded-2xl p-8 border ${item.border} hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col`}
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+                <div className={`w-14 h-14 ${item.bg} rounded-xl flex items-center justify-center mb-5 animate-icon-float group-hover:scale-110 transition-transform duration-300`}>
                   <svg
-                    className="w-7 h-7 text-primary"
+                    className={`w-7 h-7 ${item.color}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -332,53 +346,81 @@ export default function EventsPage() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-primary font-bold hover:text-primary-light transition-colors"
+                    className="btn-interact inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold shadow-md hover:shadow-lg hover:bg-primary-dark transition-all"
                   >
-                    {item.label} &rarr;
+                    {item.label}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                   </a>
                 ) : (
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-1 text-primary font-bold hover:text-primary-light transition-colors"
+                    className="btn-interact inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold shadow-md hover:shadow-lg hover:bg-primary-dark transition-all"
                   >
-                    {item.label} &rarr;
+                    {item.label}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </Link>
                 )}
               </div>
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
       </ScrollReveal>
 
-      {/* CTA - GREEN */}
-      <ScrollReveal>
-      <section className="bg-green-section py-24 relative overflow-hidden">
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
+      {/* CTA - Image background with green overlay */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Background image with Ken Burns */}
+        <div className="absolute inset-0 animate-ken-burns">
+          <Image
+            src="/images/hero-contact.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            aria-hidden="true"
+          />
+        </div>
+        {/* Dark green overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2a5435]/90 via-primary/85 to-[#2a5435]/90" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-4">
+            You&apos;re Invited
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] mb-6 leading-tight">
             Join Us This Sunday
           </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
             We would love to welcome you and your family to Central Baptist
             Church. Come experience our warm fellowship and worship with us.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-light transition-all duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg shadow-lg btn-interact"
             >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
               Get Directions
             </Link>
             <a
               href="tel:7722374907"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
             >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
               Call (772) 237-4907
             </a>
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
       {/* Lightbox */}
       {lightboxIndex !== null && (

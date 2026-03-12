@@ -241,6 +241,27 @@ html {
   animation: softGlow 4s ease-in-out infinite;
 }
 
+/* ===== SPIN SLOW (sun icon) ===== */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+/* ===== PAGE TURN (book icon) ===== */
+@keyframes pageTurn {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(20deg); }
+}
+
+.animate-page-turn {
+  animation: pageTurn 3s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
 /* ===== ICON FLOAT ===== */
 @keyframes iconFloat {
   0%, 100% { transform: translateY(0); }
