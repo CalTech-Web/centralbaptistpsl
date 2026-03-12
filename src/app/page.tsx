@@ -3,49 +3,13 @@ import Image from "next/image";
 import LatestSermon from "@/components/LatestSermon";
 import EventsCarousel from "@/components/EventsCarousel";
 import ImageSlider from "@/components/ImageSlider";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center">
-        <Image
-          src="/images/central-church-aerial.jpg"
-          alt="Central Baptist Church aerial view"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="hero-overlay absolute inset-0" />
-        <div className="relative text-center text-white px-4 max-w-4xl mx-auto">
-          <p className="tracking-[0.3em] uppercase text-sm md:text-base mb-6 font-semibold animate-fade-in-up">
-            Welcome to
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold font-[family-name:var(--font-playfair)] mb-6 leading-tight animate-fade-in-up-delay">
-            Central Baptist
-            <br />
-            Church
-          </h1>
-          <div className="section-divider mb-8 animate-fade-in-up-delay" />
-          <p className="text-xl md:text-2xl text-gray-200 italic mb-10 font-[family-name:var(--font-playfair)] animate-fade-in-up-delay-2">
-            &ldquo;One Family, Called by Christ, Sent to Serve&rdquo;
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delay-2">
-            <Link
-              href="/our-story"
-              className="bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors duration-200"
-            >
-              Learn More
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
-            >
-              Plan Your Visit
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Image Slider */}
       <ImageSlider />
