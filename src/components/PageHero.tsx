@@ -7,7 +7,7 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle }: PageHeroProps) {
   return (
-    <section className="relative min-h-[40vh] flex items-center justify-center">
+    <section className="relative h-[400px] flex items-center justify-center">
       <Image
         src="/images/central-church-aerial.jpg"
         alt=""
@@ -16,7 +16,7 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
         priority
       />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/75 to-primary/90" />
-      <div className="relative max-w-7xl mx-auto px-4 py-20 text-center text-white">
+      <div className="relative max-w-7xl mx-auto px-4 pt-24 pb-10 text-center text-white">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-playfair)] mb-4 animate-fade-in-up">
           {title}
         </h1>

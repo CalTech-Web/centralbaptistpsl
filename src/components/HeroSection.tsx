@@ -26,7 +26,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-[75px]">
         {/* YouTube Background Video */}
         {mounted && (
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
