@@ -44,6 +44,43 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[#2a5e3a]/70 to-[#2a5e3a]/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
 
+        {/* Scrolling Ticker */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/50 backdrop-blur-sm overflow-hidden">
+          <div className="ticker-track flex items-center whitespace-nowrap py-3">
+            {[...Array(10)].map((_, i) => (
+              <div key={i} className="flex items-center shrink-0">
+                <a
+                  href="https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
+                >
+                  <span className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
+                  <span className="font-semibold text-sm tracking-wide uppercase">Watch</span>
+                </a>
+                <a
+                  href="https://tithe.ly/give?c=1379702"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
+                >
+                  <span className="w-2 h-2 rounded-full bg-green-500 shrink-0" />
+                  <span className="font-semibold text-sm tracking-wide uppercase">Give</span>
+                </a>
+                <a
+                  href="https://forms.gle/QRk1FSUSFnjAVumv7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
+                >
+                  <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0" />
+                  <span className="font-semibold text-sm tracking-wide uppercase">Prayer</span>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Content Grid */}
         <div className="relative w-full max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[90vh]">
           {/* Left Side - Text */}

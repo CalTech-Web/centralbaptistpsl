@@ -96,6 +96,25 @@ html {
   animation-play-state: paused;
 }
 
+/* Ticker scrolling text */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  animation: ticker 20s linear infinite;
+  width: max-content;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
 /* Pulsing dot for upcoming events */
 @keyframes pulseDot {
   0% {
