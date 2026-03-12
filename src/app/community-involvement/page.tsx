@@ -83,6 +83,7 @@ export default function CommunityInvolvement() {
       <PageHero
         title="Community Involvement"
         subtitle="Dedicated to serving our community through love and action"
+        image="/images/com-involve-1.jpg"
       />
 
       {/* Mission Statement - with background image */}

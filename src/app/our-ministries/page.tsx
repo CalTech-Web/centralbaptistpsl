@@ -82,6 +82,7 @@ export default function OurMinistries() {
       <PageHero
         title="Our Ministries"
         subtitle="Programs and activities for children, youth, and adults"
+        image="/images/Ministry-Collage.jpg"
       />
 
       {/* Intro - WHITE */}

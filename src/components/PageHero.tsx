@@ -3,19 +3,20 @@ import Image from "next/image";
 interface PageHeroProps {
   title: string;
   subtitle?: string;
+  image?: string;
 }
 
-export default function PageHero({ title, subtitle }: PageHeroProps) {
+export default function PageHero({ title, subtitle, image = "/images/central-church-aerial.jpg" }: PageHeroProps) {
   return (
     <section className="relative h-[400px] flex items-center justify-center">
       <Image
-        src="/images/central-church-aerial.jpg"
+        src={image}
         alt=""
         fill
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/75 to-primary/90" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-primary-dark/60 to-primary/70" />
       <div className="relative max-w-7xl mx-auto px-4 pt-24 pb-10 text-center text-white">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-playfair)] mb-4 animate-fade-in-up">
           {title}
