@@ -1,7 +1,59 @@
 const CHANNEL_ID = "UCPj0sGrj03Dymk25ABXXpIQ";
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || "";
 const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 
-async function getLatestVideo() {
+async function getLiveOrLatestSermon(): Promise<{
+  videoId: string | null;
+  title: string;
+  isLive: boolean;
+}> {
+  // If no API key, fall back to RSS feed
+  if (!YOUTUBE_API_KEY) {
+    return { ...(await getLatestVideoFromRSS()), isLive: false };
+  }
+
+  try {
+    // 1. Check for an active live stream
+    const liveRes = await fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=live&type=video&maxResults=1&key=${YOUTUBE_API_KEY}`,
+      { next: { revalidate: 60 } }
+    );
+    const liveData = await liveRes.json();
+
+    if (liveData.items?.length > 0) {
+      const item = liveData.items[0];
+      return {
+        videoId: item.id.videoId,
+        title: item.snippet.title,
+        isLive: true,
+      };
+    }
+
+    // 2. No live stream — get the most recent completed live stream
+    const completedRes = await fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=completed&type=video&order=date&maxResults=1&key=${YOUTUBE_API_KEY}`,
+      { next: { revalidate: 60 } }
+    );
+    const completedData = await completedRes.json();
+
+    if (completedData.items?.length > 0) {
+      const item = completedData.items[0];
+      return {
+        videoId: item.id.videoId,
+        title: item.snippet.title,
+        isLive: false,
+      };
+    }
+
+    // 3. No completed lives either — fall back to RSS
+    return { ...(await getLatestVideoFromRSS()), isLive: false };
+  } catch {
+    // API failed — fall back to RSS
+    return { ...(await getLatestVideoFromRSS()), isLive: false };
+  }
+}
+
+async function getLatestVideoFromRSS() {
   try {
     const res = await fetch(FEED_URL, { next: { revalidate: 300 } });
     const xml = await res.text();
@@ -19,16 +71,22 @@ async function getLatestVideo() {
 }
 
 export default async function LatestSermon() {
-  const { videoId, title } = await getLatestVideo();
+  const { videoId, title, isLive } = await getLiveOrLatestSermon();
 
   return (
     <section className="bg-green-section py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
-            Latest Sermon
+            {isLive ? "Live Now" : "Latest Sermon"}
           </h2>
           <div className="w-20 h-1 bg-white/60 mx-auto mb-4" />
+          {isLive && (
+            <span className="inline-flex items-center gap-2 bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full mb-4 animate-pulse">
+              <span className="w-2 h-2 bg-white rounded-full" />
+              LIVE
+            </span>
+          )}
           {videoId && (
             <p className="font-semibold text-lg text-white/90">{title}</p>
           )}
@@ -40,7 +98,7 @@ export default async function LatestSermon() {
               <iframe
                 width="100%"
                 height="400"
-                src={`https://www.youtube.com/embed/${videoId}`}
+                src={`https://www.youtube.com/embed/${videoId}${isLive ? "?autoplay=1" : ""}`}
                 title={title}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
