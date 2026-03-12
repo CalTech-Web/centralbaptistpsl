@@ -83,16 +83,7 @@ export default function GalleryPage() {
 
       {/* Intro Section - GREEN */}
       <section className="bg-green-section py-16 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute top-8 right-[8%] w-14 h-14 text-white/[0.06] animate-icon-float" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <svg className="absolute bottom-10 left-[6%] w-10 h-10 text-white/[0.05] animate-icon-pulse" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </div>
-
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
             Our Church Family in Action
           </h2>
@@ -152,16 +143,7 @@ export default function GalleryPage() {
 
       {/* CTA Section - GREEN */}
       <section className="bg-green-section py-20 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute top-6 left-[8%] w-16 h-16 text-white/[0.07] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" />
-          </svg>
-          <svg className="absolute bottom-8 right-[10%] w-12 h-12 text-white/[0.06] animate-icon-bounce" style={{ animationDelay: "0.5s" }} fill="none" stroke="currentColor" strokeWidth={1.2} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </div>
-
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
             Be Part of the Story
           </h2>

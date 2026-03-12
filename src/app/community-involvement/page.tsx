@@ -87,53 +87,31 @@ export default function CommunityInvolvement() {
         image="/images/hero-community.jpg"
       />
 
-      {/* Mission Statement - with background image */}
+      {/* Mission Statement - bridge section */}
       <ScrollReveal>
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/com-involve-1.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4">
-          <div className="max-w-2xl">
-            <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
-              Our Mission
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
-              Serving Port St. Lucie
-            </h2>
-            <p className="text-lg text-white/85 leading-relaxed mb-4">
-              Central Baptist Church in Port St. Lucie, Florida is dedicated to
-              providing strong community involvement through its various
-              ministries. We strive to provide meaningful opportunities for our
-              members to give back to their communities through donations and
-              volunteerism.
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+            Our Mission
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-5 leading-tight">
+            Serving Port St. Lucie
+          </h2>
+          <p className="text-lg text-gray-warm leading-relaxed mb-8 max-w-2xl mx-auto">
+            Central Baptist Church is dedicated to providing strong community
+            involvement through its various ministries. We strive to provide
+            meaningful opportunities for our members to give back through
+            donations and volunteerism.
+          </p>
+          <blockquote className="relative max-w-xl mx-auto bg-light rounded-xl px-8 py-6 border-l-4 border-primary">
+            <p className="text-dark/80 italic text-lg leading-relaxed">
+              &ldquo;Each of you should use whatever gift you have received to
+              serve others, as faithful stewards of God&apos;s grace.&rdquo;
             </p>
-            <blockquote className="border-l-4 border-primary-light pl-4 mb-8">
-              <p className="text-white/75 italic text-base leading-relaxed">
-                &ldquo;Each of you should use whatever gift you have received to
-                serve others, as faithful stewards of God&apos;s grace.&rdquo;
-              </p>
-              <cite className="text-primary-light text-sm not-italic font-semibold mt-2 block">
-                1 Peter 4:10
-              </cite>
-            </blockquote>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors btn-interact"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-              Get Involved
-            </Link>
-          </div>
+            <cite className="text-primary text-sm not-italic font-semibold mt-3 block">
+              1 Peter 4:10
+            </cite>
+          </blockquote>
         </div>
       </section>
       </ScrollReveal>
