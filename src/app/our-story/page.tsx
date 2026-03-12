@@ -63,7 +63,7 @@ export default function OurStory() {
 
       {/* History Timeline - GREEN */}
       <ScrollReveal>
-      <section className="bg-green-section py-20 relative overflow-hidden">
+      <section className="bg-green-section py-24 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
@@ -97,7 +97,7 @@ export default function OurStory() {
 
       {/* Pastor Section */}
       <ScrollReveal>
-      <section className="py-20 bg-light relative overflow-hidden">
+      <section className="py-24 bg-light relative overflow-hidden">
         {/* Decorative background */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
@@ -114,7 +114,7 @@ export default function OurStory() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="rounded-xl overflow-hidden shadow-lg ring-4 ring-primary/20 hover:ring-primary/40 transition-all duration-300 hover:shadow-xl">
+            <div className="rounded-xl overflow-hidden shadow-lg ring-4 ring-primary/10 transition-all duration-300 hover:shadow-lg">
               <Image
                 src="/images/pastor-1030x771-1-1024x767.jpg"
                 alt="Dr. Nick Manzie"
@@ -162,7 +162,7 @@ export default function OurStory() {
 
       {/* Staff Section */}
       <ScrollReveal>
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-24 bg-white relative overflow-hidden">
         {/* Decorative background */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl" />
@@ -179,7 +179,7 @@ export default function OurStory() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-primary/20">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-primary/15">
               <div className="aspect-square relative">
                 <Image
                   src="/images/Pastor-Nick.jpg"
@@ -201,7 +201,7 @@ export default function OurStory() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-primary/20">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-primary/15">
               <div className="aspect-square relative">
                 <Image
                   src="/images/don-reid.jpg"
@@ -225,7 +225,7 @@ export default function OurStory() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-primary/20">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-primary/15">
               <div className="aspect-square relative">
                 <Image
                   src="/images/jessica-manzie.jpg"
@@ -255,7 +255,7 @@ export default function OurStory() {
 
       {/* CTA Section - GREEN with decorative icons */}
       <ScrollReveal>
-      <section className="bg-green-section py-20 relative overflow-hidden">
+      <section className="bg-green-section py-24 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
             Join Us This Sunday
@@ -267,13 +267,13 @@ export default function OurStory() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-light transition-all duration-200 btn-interact"
             >
               Get Directions
             </Link>
             <a
               href="tel:7722374907"
-              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
             >
               Call (772) 237-4907
             </a>

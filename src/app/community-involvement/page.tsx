@@ -89,12 +89,12 @@ export default function CommunityInvolvement() {
 
       {/* Mission Statement - bridge section */}
       <ScrollReveal>
-      <section className="py-14 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
             Our Mission
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-5 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-5 leading-tight">
             Serving Port St. Lucie
           </h2>
           <p className="text-lg text-gray-warm leading-relaxed mb-8 max-w-2xl mx-auto">
@@ -118,14 +118,14 @@ export default function CommunityInvolvement() {
 
       {/* Impact Stats */}
       <ScrollReveal>
-      <section className="py-16 bg-light relative overflow-hidden">
+      <section className="py-20 bg-light relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
         <div className="relative max-w-5xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
               Our Impact
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark">
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark">
               Making a Difference Since 1978
             </h2>
           </div>
@@ -138,7 +138,7 @@ export default function CommunityInvolvement() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="group bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1"
+                className="group bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -160,7 +160,7 @@ export default function CommunityInvolvement() {
 
       {/* How We Serve - GREEN glass cards matching homepage ministries */}
       <ScrollReveal>
-      <section className="bg-green-section py-20 relative overflow-hidden">
+      <section className="bg-green-section py-24 relative overflow-hidden">
         <div className="relative max-w-5xl mx-auto px-4 z-10">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
@@ -176,7 +176,7 @@ export default function CommunityInvolvement() {
             {serviceCards.map((item) => (
               <div
                 key={item.title}
-                className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300"
+                className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
                   <svg
@@ -206,7 +206,7 @@ export default function CommunityInvolvement() {
 
       {/* Photo Gallery with Lightbox */}
       <ScrollReveal>
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -267,9 +267,9 @@ export default function CommunityInvolvement() {
 
       {/* CTA - GREEN with decorative icons */}
       <ScrollReveal>
-      <section className="bg-green-section py-20 relative overflow-hidden">
+      <section className="bg-green-section py-24 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
             Get Involved Today
           </h2>
           <p className="text-white/90 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -280,7 +280,7 @@ export default function CommunityInvolvement() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-light transition-all duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -289,7 +289,7 @@ export default function CommunityInvolvement() {
             </Link>
             <Link
               href="/mission-trips"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -308,52 +308,50 @@ export default function CommunityInvolvement() {
           onClick={closeLightbox}
         >
           <button
-            className="absolute top-4 right-4 text-white text-4xl font-light hover:text-gray-300 transition-colors z-10"
             onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
             aria-label="Close lightbox"
           >
-            &times;
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
 
           <button
-            className="absolute left-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10 select-none"
-            onClick={(e) => {
-              e.stopPropagation();
-              goPrev();
-            }}
+            onClick={(e) => { e.stopPropagation(); goPrev(); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition-all z-10"
             aria-label="Previous image"
           >
-            &#8249;
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); goNext(); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition-all z-10"
+            aria-label="Next image"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </button>
 
           <div
-            className="relative w-[90vw] h-[80vh] max-w-5xl"
+            className="relative max-w-5xl max-h-[85vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={galleryImages[lightboxIndex].src}
               alt={galleryImages[lightboxIndex].alt}
-              fill
-              className="object-contain"
-              sizes="90vw"
-              priority
+              width={1200}
+              height={800}
+              className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
             />
+            <p className="text-white/70 text-center mt-3 text-sm">
+              {galleryImages[lightboxIndex].alt} &mdash; {lightboxIndex + 1} of {galleryImages.length}
+            </p>
           </div>
-
-          <button
-            className="absolute right-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10 select-none"
-            onClick={(e) => {
-              e.stopPropagation();
-              goNext();
-            }}
-            aria-label="Next image"
-          >
-            &#8250;
-          </button>
-
-          <p className="absolute bottom-6 text-white text-lg font-medium">
-            {galleryImages[lightboxIndex].alt}
-          </p>
         </div>
       )}
     </>

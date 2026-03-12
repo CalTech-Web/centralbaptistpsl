@@ -16,7 +16,7 @@ export default function Contact() {
 
       {/* Contact Info - GREEN */}
       <ScrollReveal>
-      <section className="bg-green-section py-20">
+      <section className="bg-green-section py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-7 max-w-4xl mx-auto">
-            <a href="https://maps.google.com/?q=202+SW+Tulip+Blvd,+Port+St.+Lucie,+FL+34953" target="_blank" rel="noopener noreferrer" className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 text-center">
+            <a href="https://maps.google.com/?q=202+SW+Tulip+Blvd,+Port+St.+Lucie,+FL+34953" target="_blank" rel="noopener noreferrer" className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 text-center">
               <div className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center mx-auto mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -43,7 +43,7 @@ export default function Contact() {
               <p className="text-white/75 text-sm leading-relaxed">202 SW Tulip Blvd<br />Port St. Lucie, FL 34953</p>
             </a>
 
-            <a href="tel:7722374907" className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 text-center">
+            <a href="tel:7722374907" className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 text-center">
               <div className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center mx-auto mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -53,7 +53,7 @@ export default function Contact() {
               <p className="text-white/75 text-sm">(772) 237-4907</p>
             </a>
 
-            <a href="mailto:centralbaptist2018@gmail.com" className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 text-center">
+            <a href="mailto:centralbaptist2018@gmail.com" className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 text-center">
               <div className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center mx-auto mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -69,7 +69,7 @@ export default function Contact() {
 
       {/* Send Us a Message - WHITE */}
       <ScrollReveal>
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             {/* Form */}
@@ -109,7 +109,7 @@ export default function Contact() {
               </div>
 
               {/* Service Times Mini */}
-              <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20">
+              <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15">
                 <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-4 text-center">
                   <div className="flex items-center justify-center gap-3">
                     <svg className="w-6 h-6 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,19 +122,19 @@ export default function Contact() {
                   <div className="space-y-3 text-gray-warm">
                     <div className="flex justify-between items-center border-b border-gray-100 pb-3">
                       <span className="font-semibold text-dark">Sunday School</span>
-                      <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm">9:30 AM</span>
+                      <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm">9:30 AM</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-100 pb-3">
                       <span className="font-semibold text-dark">Morning Worship</span>
-                      <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm">11:00 AM</span>
+                      <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm">11:00 AM</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-100 pb-3">
                       <span className="font-semibold text-dark">Evening Worship</span>
-                      <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm">6:00 PM</span>
+                      <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm">6:00 PM</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="font-semibold text-dark">Wed. Prayer Meeting</span>
-                      <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm">6:30 PM</span>
+                      <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm">6:30 PM</span>
                     </div>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export default function Contact() {
 
       {/* Pastoral Staff - CREAM */}
       <ScrollReveal>
-      <section className="py-20 bg-light">
+      <section className="py-24 bg-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -163,7 +163,7 @@ export default function Contact() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
+            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all">
                   <Image src="/images/Pastor-Nick.jpg" alt="Pastor Nick Manzie" width={56} height={56} className="w-full h-full object-cover" />
@@ -183,7 +183,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
+            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all">
                   <Image src="/images/don-reid.jpg" alt="Pastor Don Reid" width={56} height={56} className="w-full h-full object-cover" />
@@ -203,7 +203,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
+            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -220,7 +220,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
+            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all">
                   <Image src="/images/jessica-manzie.jpg" alt="Jessica Manzie" width={56} height={56} className="w-full h-full object-cover" />
@@ -241,7 +241,7 @@ export default function Contact() {
 
       {/* Online Giving - GREEN */}
       <ScrollReveal>
-      <section className="bg-green-section py-20">
+      <section className="bg-green-section py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
             Support Our Church
@@ -258,7 +258,7 @@ export default function Contact() {
               href="https://tithe.ly/give?c=1379702"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-all duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-light transition-all duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -269,7 +269,7 @@ export default function Contact() {
               href="https://forms.gle/QRk1FSUSFnjAVumv7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />

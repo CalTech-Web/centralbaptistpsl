@@ -78,7 +78,7 @@ export default function EventsPage() {
 
       {/* Upcoming Events - WHITE */}
       <ScrollReveal>
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -120,7 +120,7 @@ export default function EventsPage() {
             {images.map((img, i) => (
               <div
                 key={img.src}
-                className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.15)] cursor-pointer group"
+                className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm cursor-pointer group"
                 onClick={() => setLightboxIndex(i)}
               >
                 <Image
@@ -156,7 +156,7 @@ export default function EventsPage() {
       </ScrollReveal>
 
       {/* Weekly Schedule - GREEN */}
-      <section className="bg-green-section py-20 relative overflow-hidden">
+      <section className="bg-green-section py-24 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
@@ -174,8 +174,8 @@ export default function EventsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Sunday Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="bg-gradient-to-r from-primary-dark to-dark px-8 py-5 text-center">
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-5 text-center">
                 <div className="flex items-center justify-center gap-3">
                   <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -190,29 +190,29 @@ export default function EventsPage() {
                       <span className="font-semibold text-dark block">Sunday School</span>
                       <span className="text-sm text-gray-warm">All ages welcome</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">9:30 AM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">9:30 AM</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-gray-100 pb-4">
                     <div>
                       <span className="font-semibold text-dark block">Morning Worship</span>
                       <span className="text-sm text-gray-warm">Main service</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">11:00 AM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">11:00 AM</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <div>
                       <span className="font-semibold text-dark block">Evening Worship</span>
                       <span className="text-sm text-gray-warm">Evening fellowship</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">6:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">6:00 PM</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Wednesday Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="bg-gradient-to-r from-primary-dark to-dark px-8 py-5 text-center">
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-5 text-center">
                 <div className="flex items-center justify-center gap-3">
                   <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -227,28 +227,28 @@ export default function EventsPage() {
                       <span className="font-semibold text-dark block">Prayer Meeting</span>
                       <span className="text-sm text-gray-warm">Gather in prayer</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">6:30 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">6:30 PM</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-gray-100 pb-4">
                     <div>
                       <span className="font-semibold text-dark block">Kids Bible Study</span>
                       <span className="text-sm text-gray-warm">5K&ndash;5th Grade</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-gray-100 pb-4">
                     <div>
                       <span className="font-semibold text-dark block">Youth Bible Study</span>
                       <span className="text-sm text-gray-warm">6th&ndash;12th Grade</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <div>
                       <span className="font-semibold text-dark block">Adult Bible Study</span>
                       <span className="text-sm text-gray-warm">In-depth study</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
                   </div>
                 </div>
               </div>
@@ -259,7 +259,7 @@ export default function EventsPage() {
 
       {/* Ways to Connect - CREAM */}
       <ScrollReveal>
-      <section className="py-20 bg-light relative overflow-hidden">
+      <section className="py-24 bg-light relative overflow-hidden">
         <div className="relative max-w-5xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -304,7 +304,7 @@ export default function EventsPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1 flex flex-col"
+                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1 flex flex-col"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
                   <svg
@@ -353,7 +353,7 @@ export default function EventsPage() {
 
       {/* CTA - GREEN */}
       <ScrollReveal>
-      <section className="bg-green-section py-20 relative overflow-hidden">
+      <section className="bg-green-section py-24 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
             Join Us This Sunday
@@ -365,13 +365,13 @@ export default function EventsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-light transition-all duration-200 btn-interact"
             >
               Get Directions
             </Link>
             <a
               href="tel:7722374907"
-              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
             >
               Call (772) 237-4907
             </a>
@@ -387,42 +387,47 @@ export default function EventsPage() {
           onClick={closeLightbox}
         >
           <button
-            className="absolute top-4 right-4 text-white text-4xl font-light hover:text-gray-300 transition-colors z-10"
             onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
             aria-label="Close lightbox"
           >
-            &times;
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
           <button
-            className="absolute left-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10 select-none"
             onClick={(e) => { e.stopPropagation(); goPrev(); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition-all z-10"
             aria-label="Previous image"
           >
-            &#8249;
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); goNext(); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 rounded-full p-2 transition-all z-10"
+            aria-label="Next image"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </button>
           <div
-            className="relative w-[90vw] h-[80vh] max-w-5xl"
+            className="relative max-w-5xl max-h-[85vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={images[lightboxIndex].src}
               alt={images[lightboxIndex].alt}
-              fill
-              className="object-contain"
-              sizes="90vw"
-              priority
+              width={1200}
+              height={800}
+              className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
             />
+            <p className="text-white/70 text-center mt-3 text-sm">
+              {images[lightboxIndex].alt} &mdash; {lightboxIndex + 1} of {images.length}
+            </p>
           </div>
-          <button
-            className="absolute right-4 text-white text-5xl font-light hover:text-gray-300 transition-colors z-10 select-none"
-            onClick={(e) => { e.stopPropagation(); goNext(); }}
-            aria-label="Next image"
-          >
-            &#8250;
-          </button>
-          <p className="absolute bottom-6 text-white text-lg font-medium">
-            {images[lightboxIndex].alt}
-          </p>
         </div>
       )}
     </>

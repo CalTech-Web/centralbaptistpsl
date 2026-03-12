@@ -65,7 +65,7 @@ export default function BibleReading() {
 
       {/* Introduction Section - WHITE */}
       <ScrollReveal>
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         </div>
@@ -93,7 +93,7 @@ export default function BibleReading() {
               </p>
               <Link
                 href="#plans"
-                className="inline-block bg-primary text-white px-6 py-3 rounded font-bold hover:bg-primary-dark transition-colors btn-interact"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-bold shadow-md hover:shadow-lg hover:bg-primary-dark transition-all btn-interact"
               >
                 Explore the Plans
               </Link>
@@ -222,7 +222,7 @@ export default function BibleReading() {
 
       {/* How to Get Started - CREAM */}
       <ScrollReveal>
-      <section className="py-20 bg-light">
+      <section className="py-24 bg-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -238,7 +238,7 @@ export default function BibleReading() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="group bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1"
+                className="group bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1"
               >
                 <span className="inline-block text-primary/20 text-5xl font-bold font-[family-name:var(--font-playfair)] mb-3">
                   {step.number}
@@ -263,7 +263,7 @@ export default function BibleReading() {
 
       {/* CTA Section - GREEN with decorative icons */}
       <ScrollReveal>
-      <section className="bg-green-section py-20 relative overflow-hidden">
+      <section className="bg-green-section py-24 relative overflow-hidden">
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
             Start Reading Today
@@ -275,7 +275,7 @@ export default function BibleReading() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:centralbaptist2018@gmail.com"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-light transition-all duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -284,7 +284,7 @@ export default function BibleReading() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
