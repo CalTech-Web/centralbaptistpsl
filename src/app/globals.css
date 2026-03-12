@@ -190,3 +190,27 @@ html {
 .animate-icon-spin-slow {
   animation: iconSpinSlow 12s linear infinite;
 }
+
+/* Hanging / pendulum swing */
+@keyframes iconSwing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(6deg);
+  }
+  80% {
+    transform: rotate(-4deg);
+  }
+}
+
+.animate-icon-swing {
+  transform-origin: top center;
+  animation: iconSwing 4s ease-in-out infinite;
+}
