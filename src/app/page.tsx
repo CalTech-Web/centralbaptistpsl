@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LatestSermon from "@/components/LatestSermon";
 import EventsCarousel from "@/components/EventsCarousel";
+import ImageSlider from "@/components/ImageSlider";
 
 export default function Home() {
   return (
@@ -45,6 +46,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Image Slider */}
+      <ImageSlider />
 
       {/* Upcoming Events - WHITE */}
       <section className="py-20 bg-white">

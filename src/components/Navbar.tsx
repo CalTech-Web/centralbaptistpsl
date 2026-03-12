@@ -29,14 +29,11 @@ export default function Navbar() {
               height={30}
               className="w-auto h-10"
             />
-            <div className="hidden sm:flex flex-col">
-              <span className="text-lg font-bold tracking-wide text-dark font-[family-name:var(--font-playfair)]">
-                Central Baptist Church
-              </span>
-              <span className="text-xs text-primary tracking-widest uppercase">
-                Port St. Lucie, FL
-              </span>
-            </div>
+            <span className="hidden sm:block text-xs font-semibold tracking-wide">
+              <span className="text-dark">One Family, </span>
+              <span className="text-[#7B1A1A]">Called by Christ</span>
+              <span className="text-dark">, Sent to Serve</span>
+            </span>
           </Link>
 
           <div className="hidden xl:flex items-center gap-1">
