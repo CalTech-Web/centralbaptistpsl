@@ -241,6 +241,16 @@ html {
   animation: softGlow 4s ease-in-out infinite;
 }
 
+/* ===== ICON FLOAT ===== */
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.group:hover .animate-icon-float {
+  animation: iconFloat 1.5s ease-in-out infinite;
+}
+
 /* ===== RESPECT REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   *,
