@@ -40,9 +40,9 @@ export default function HeroSection() {
           </div>
         )}
 
-        {/* Black/Green Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[#2a5e3a]/70 to-[#2a5e3a]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+        {/* Black/Green Gradient Overlay with Ken Burns */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[#2a5e3a]/70 to-[#2a5e3a]/40 animate-ken-burns" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 animate-gradient-shift" />
 
         {/* Scrolling Ticker */}
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/50 backdrop-blur-sm overflow-hidden">
@@ -104,13 +104,13 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up-delay-2">
               <Link
                 href="/our-story"
-                className="bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors duration-200 text-center"
+                className="bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-all duration-200 text-center btn-interact"
               >
                 Learn More
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 text-center"
+                className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 text-center btn-interact"
               >
                 Plan Your Visit
               </Link>
@@ -129,7 +129,7 @@ export default function HeroSection() {
               <span className="absolute w-24 h-24 rounded-full bg-white/15 animate-[heroPulse_2s_ease-out_0.4s_infinite]" />
 
               {/* Play button */}
-              <span className="relative w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/60 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 cursor-pointer">
+              <span className="relative w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/60 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 cursor-pointer animate-play-glow">
                 <svg
                   className="w-8 h-8 text-white ml-1"
                   fill="currentColor"

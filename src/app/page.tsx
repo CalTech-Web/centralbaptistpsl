@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import PrayerRequestSection from "@/components/PrayerRequestSection";
 import ServiceTimesSection from "@/components/ServiceTimesSection";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -13,10 +14,13 @@ export default function Home() {
       <HeroSection />
 
       {/* Upcoming Events Section */}
-      <UpcomingEventsSection />
+      <ScrollReveal>
+        <UpcomingEventsSection />
+      </ScrollReveal>
 
       {/* Welcome Section - GREEN */}
       <section className="bg-green-section py-20">
+        <ScrollReveal>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
@@ -38,7 +42,7 @@ export default function Home() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors"
+                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-all btn-interact"
               >
                 Visit Us This Sunday
               </Link>
@@ -54,10 +58,13 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Prayer Request Section */}
-      <PrayerRequestSection />
+      <ScrollReveal>
+        <PrayerRequestSection />
+      </ScrollReveal>
 
       {/* Bible Reading - GREEN */}
       <section className="bg-green-section py-20 relative overflow-hidden">
@@ -74,6 +81,7 @@ export default function Home() {
           </svg>
         </div>
 
+        <ScrollReveal>
         <div className="relative max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Text */}
@@ -89,7 +97,7 @@ export default function Home() {
               </p>
               <Link
                 href="/bible-reading"
-                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors"
+                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-all btn-interact"
               >
                 View Reading Plans
               </Link>
@@ -128,60 +136,103 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
-      {/* Pastor Section - WHITE */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Pastor Section */}
+      <section className="py-20 bg-light relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl translate-x-1/2 -translate-y-1/4" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.03] rounded-full blur-3xl -translate-x-1/3 translate-y-1/4" />
+        </div>
+
+        <ScrollReveal>
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+              Meet Our Leader
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
+              Our Pastor
+            </h2>
+            <div className="section-divider" />
+          </div>
+
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="rounded-xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/pastor-1030x771-1-1024x767.jpg"
-                  alt="Dr. Nick Manzie"
-                  width={600}
-                  height={450}
-                  className="w-full h-auto"
-                />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+              {/* Photo */}
+              <div className="relative group">
+                <div className="absolute -inset-3 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-2xl blur-sm group-hover:from-primary/30 transition-all duration-500" />
+                <div className="relative rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                  <Image
+                    src="/images/pastor-1030x771-1-1024x767.jpg"
+                    alt="Dr. Nick Manzie"
+                    width={600}
+                    height={450}
+                    className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-700"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-6">
+                    <p className="text-white/90 text-sm font-medium italic">
+                      &ldquo;We just care about you.&rdquo;
+                    </p>
+                  </div>
+                </div>
               </div>
+
+              {/* Info */}
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
-                  Our Pastor
-                </h2>
-                <div className="section-divider !mx-0 mb-6" />
-                <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-5">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                  </svg>
+                  Serving Since 2003
+                </div>
+                <h3 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-1">
                   Dr. Nick Manzie
                 </h3>
-                <p className="text-primary font-semibold mb-4">
+                <p className="text-primary font-semibold text-lg mb-6">
                   &ldquo;Brother Nick&rdquo;
                 </p>
-                <p className="text-gray-warm leading-relaxed mb-6">
+                <p className="text-gray-warm leading-relaxed mb-4">
                   Dr. Nick Manzie has faithfully led Central Baptist Church since
                   2003. He began his ministry as a Chaplain with Christian
                   Motorsports International and has been dedicated to serving the
-                  Port St. Lucie community and guiding our congregation in faith
-                  and worship.
+                  Port St. Lucie community.
+                </p>
+                <p className="text-gray-warm leading-relaxed mb-8">
+                  His heart for people and passion for God&apos;s Word has guided our
+                  congregation through seasons of growth, fellowship, and faithful
+                  worship for over two decades.
                 </p>
                 <Link
                   href="/our-story"
-                  className="inline-block text-primary font-bold hover:text-primary-light transition-colors"
+                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-light transition-all duration-200 btn-interact"
                 >
-                  Read More &rarr;
+                  Read Our Story
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
                 </Link>
               </div>
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Latest Sermon - GREEN */}
-      <LatestSermon />
+      <ScrollReveal>
+        <LatestSermon />
+      </ScrollReveal>
 
       {/* Service Times */}
-      <ServiceTimesSection variant="light" />
+      <ScrollReveal>
+        <ServiceTimesSection variant="light" />
+      </ScrollReveal>
 
       {/* Ministries Overview - WHITE */}
       <section className="py-20 bg-white">
+        <ScrollReveal>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">Our Ministries</h2>
@@ -190,6 +241,7 @@ export default function Home() {
               There is a place for everyone at Central Baptist. Explore the many ways you can grow, serve, and connect.
             </p>
           </div>
+          <ScrollReveal stagger>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-5xl mx-auto">
             {[
               { title: "Children's Ministries", desc: "Nursery care and kids worship services for our youngest members.", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", color: "text-rose-500", bg: "bg-rose-50", border: "border-rose-300" },
@@ -201,7 +253,7 @@ export default function Home() {
             ].map((ministry) => (
               <div key={ministry.title} className={`group bg-white rounded-2xl p-8 border ${ministry.border} hover:border-transparent hover:-translate-y-1 hover:shadow-xl transition-all duration-300`}>
                 <div className={`w-14 h-14 rounded-full ${ministry.bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-all duration-300`}>
-                  <svg className={`w-7 h-7 ${ministry.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-7 h-7 ${ministry.color} icon-breathe`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ministry.icon} />
                   </svg>
                 </div>
@@ -210,12 +262,14 @@ export default function Home() {
               </div>
             ))}
           </div>
+          </ScrollReveal>
           <div className="text-center mt-12">
-            <Link href="/our-ministries" className="inline-block bg-primary text-white px-8 py-3.5 rounded-lg font-bold hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">
+            <Link href="/our-ministries" className="inline-block bg-primary text-white px-8 py-3.5 rounded-lg font-bold hover:bg-primary-light transition-all duration-200 btn-interact">
               Explore Our Ministries
             </Link>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* CTA Section - GREEN with decorative icons */}
@@ -256,6 +310,7 @@ export default function Home() {
           </svg>
         </div>
 
+        <ScrollReveal>
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
             Join Us This Sunday
@@ -267,18 +322,19 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200"
+              className="bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-all duration-200 btn-interact"
             >
               Get Directions
             </Link>
             <a
               href="tel:7722374907"
-              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
+              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
             >
               Call (772) 237-4907
             </a>
           </div>
         </div>
+        </ScrollReveal>
       </section>
     </>
   );

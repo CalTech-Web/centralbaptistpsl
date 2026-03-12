@@ -125,7 +125,7 @@ export default function PrayerRequestSection() {
               href="https://forms.gle/QRk1FSUSFnjAVumv7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 btn-interact"
             >
               <svg
                 className="w-5 h-5"

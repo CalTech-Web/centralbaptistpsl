@@ -101,7 +101,7 @@ export default function UpcomingEventsSection() {
         <div className="text-center">
           <Link
             href="/events"
-            className="inline-block bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-light transition-colors duration-200"
+            className="inline-block bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-light transition-colors duration-200 btn-interact"
           >
             View All Events
           </Link>
