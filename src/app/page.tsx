@@ -37,7 +37,7 @@ export default function Home() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors"
+                className="btn-interact inline-block bg-white text-primary px-7 py-3.5 rounded-lg font-bold shadow-md hover:shadow-lg hover:bg-light transition-colors"
               >
                 Visit Us This Sunday
               </Link>
@@ -125,8 +125,11 @@ export default function Home() {
       {/* Bible Reading - GREEN */}
       <ScrollReveal>
       <section className="bg-green-section py-24 relative overflow-hidden">
-        {/* Decorative background pattern */}
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z' fill='white' fill-opacity='1'/%3E%3C/svg%3E\")" }} />
+        {/* Subtle radial glow */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-white/[0.04] rounded-full blur-3xl" />
+          <div className="absolute -bottom-32 -left-16 w-[400px] h-[400px] bg-white/[0.03] rounded-full blur-3xl" />
+        </div>
 
         <div className="relative max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -277,7 +280,7 @@ export default function Home() {
           <ScrollReveal stagger>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Sunday Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1.5">
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
               <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-6 text-center">
                 <div className="flex items-center justify-center gap-3">
                   <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -294,7 +297,7 @@ export default function Home() {
                       <span className="font-semibold text-dark block">Sunday School</span>
                       <span className="text-sm text-gray-warm">All ages welcome</span>
                     </div>
-                    <span className="text-primary font-extrabold bg-primary/10 px-4 py-1.5 rounded-full text-base shrink-0">9:30 AM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-4 py-1.5 rounded-full text-sm shrink-0">9:30 AM</span>
                   </div>
                   <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
                     <svg className="w-4 h-4 text-primary/50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>
@@ -302,7 +305,7 @@ export default function Home() {
                       <span className="font-semibold text-dark block">Morning Worship</span>
                       <span className="text-sm text-gray-warm">Main service</span>
                     </div>
-                    <span className="text-primary font-extrabold bg-primary/10 px-4 py-1.5 rounded-full text-base shrink-0">11:00 AM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-4 py-1.5 rounded-full text-sm shrink-0">11:00 AM</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-4 h-4 text-primary/50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
@@ -310,14 +313,14 @@ export default function Home() {
                       <span className="font-semibold text-dark block">Evening Worship</span>
                       <span className="text-sm text-gray-warm">Evening fellowship</span>
                     </div>
-                    <span className="text-primary font-extrabold bg-primary/10 px-4 py-1.5 rounded-full text-base shrink-0">6:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-4 py-1.5 rounded-full text-sm shrink-0">6:00 PM</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Wednesday Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1.5">
+            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
               <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-6 text-center">
                 <div className="flex items-center justify-center gap-3">
                   <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -334,7 +337,7 @@ export default function Home() {
                       <span className="font-semibold text-dark block">Prayer Meeting</span>
                       <span className="text-sm text-gray-warm">Gather in prayer</span>
                     </div>
-                    <span className="text-primary font-extrabold bg-primary/10 px-4 py-1.5 rounded-full text-base shrink-0">6:30 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-4 py-1.5 rounded-full text-sm shrink-0">6:30 PM</span>
                   </div>
                   <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
                     <svg className="w-4 h-4 text-primary/50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
@@ -342,7 +345,7 @@ export default function Home() {
                       <span className="font-semibold text-dark block">Kids Bible Study</span>
                       <span className="text-sm text-gray-warm">Ages 4&ndash;12</span>
                     </div>
-                    <span className="text-primary font-extrabold bg-primary/10 px-4 py-1.5 rounded-full text-base shrink-0">7:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-4 py-1.5 rounded-full text-sm shrink-0">7:00 PM</span>
                   </div>
                   <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
                     <svg className="w-4 h-4 text-primary/50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -350,7 +353,7 @@ export default function Home() {
                       <span className="font-semibold text-dark block">Youth Bible Study</span>
                       <span className="text-sm text-gray-warm">Teens</span>
                     </div>
-                    <span className="text-primary font-extrabold bg-primary/10 px-4 py-1.5 rounded-full text-base shrink-0">7:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-4 py-1.5 rounded-full text-sm shrink-0">7:00 PM</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-4 h-4 text-primary/50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
@@ -358,7 +361,7 @@ export default function Home() {
                       <span className="font-semibold text-dark block">Adult Bible Study</span>
                       <span className="text-sm text-gray-warm">In-depth study</span>
                     </div>
-                    <span className="text-primary font-extrabold bg-primary/10 px-4 py-1.5 rounded-full text-base shrink-0">7:00 PM</span>
+                    <span className="text-primary font-bold bg-primary/[0.08] px-4 py-1.5 rounded-full text-sm shrink-0">7:00 PM</span>
                   </div>
                 </div>
               </div>
@@ -408,15 +411,20 @@ export default function Home() {
       </ScrollReveal>
 
       {/* Ministries Overview - WHITE */}
-      <section className="py-20 bg-white">
+      <ScrollReveal>
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
+            <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+              Get Involved
+            </span>
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">Our Ministries</h2>
-            <div className="section-divider mb-5" />
+            <div className="section-divider mb-6" />
             <p className="text-gray-warm text-lg max-w-2xl mx-auto">
               There is a place for everyone at Central Baptist. Explore the many ways you can grow, serve, and connect.
             </p>
           </div>
+          <ScrollReveal stagger>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-5xl mx-auto">
             {[
               { title: "Children's Ministries", desc: "Nursery care and kids worship services for our youngest members.", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", color: "text-rose-500", bg: "bg-rose-50" },
@@ -426,9 +434,9 @@ export default function Home() {
               { title: "Men's & Women's Groups", desc: "Fellowship and ministry opportunities for adults.", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z", color: "text-teal-500", bg: "bg-teal-50" },
               { title: "Mission Trips", desc: "Serving communities across the Southeast United States.", icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z", color: "text-emerald-500", bg: "bg-emerald-50" },
             ].map((ministry) => (
-              <div key={ministry.title} className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                <div className={`w-14 h-14 rounded-full ${ministry.bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-all duration-300`}>
-                  <svg className={`w-7 h-7 ${ministry.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={ministry.title} className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary/15 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+                <div className={`w-13 h-13 rounded-xl ${ministry.bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
+                  <svg className={`w-6 h-6 ${ministry.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ministry.icon} />
                   </svg>
                 </div>
@@ -437,13 +445,15 @@ export default function Home() {
               </div>
             ))}
           </div>
+          </ScrollReveal>
           <div className="text-center mt-12">
-            <Link href="/our-ministries" className="inline-block bg-primary text-white px-8 py-3.5 rounded-lg font-bold hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">
+            <Link href="/our-ministries" className="btn-interact inline-block bg-primary text-white px-8 py-3.5 rounded-lg font-bold shadow-md hover:shadow-lg hover:bg-primary-light transition-all duration-200">
               Explore Our Ministries
             </Link>
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA Section - Image background with green overlay */}
       <section className="relative py-24 overflow-hidden">
@@ -459,17 +469,6 @@ export default function Home() {
         </div>
         {/* Dark green overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#2a5435]/90 via-primary/85 to-[#2a5435]/90" />
-
-        {/* Decorative SVG icons */}
-        <svg className="absolute top-8 left-[10%] w-12 h-12 text-white/[0.07]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M11 2v8H3v2h8v8h2v-8h8v-2h-8V2h-2z" />
-        </svg>
-        <svg className="absolute bottom-10 right-[12%] w-16 h-16 text-white/[0.06]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-        </svg>
-        <svg className="absolute top-12 right-[8%] w-10 h-10 text-white/[0.05]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
           <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-4">
