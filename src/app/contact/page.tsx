@@ -1,4 +1,3 @@
-import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 
@@ -288,15 +287,17 @@ export default function Contact() {
               </svg>
               Give Online
             </a>
-            <Link
-              href="/contact"
+            <a
+              href="https://forms.gle/QRk1FSUSFnjAVumv7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
               </svg>
               Submit a Prayer Request
-            </Link>
+            </a>
           </div>
         </div>
       </section>

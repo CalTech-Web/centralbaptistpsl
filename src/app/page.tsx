@@ -3,6 +3,8 @@ import Image from "next/image";
 import LatestSermon from "@/components/LatestSermon";
 import HeroSection from "@/components/HeroSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
+import PrayerRequestSection from "@/components/PrayerRequestSection";
+import ServiceTimesSection from "@/components/ServiceTimesSection";
 
 export default function Home() {
   return (
@@ -55,64 +57,7 @@ export default function Home() {
       </section>
 
       {/* Prayer Request Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/prayer-request.jpg"
-            alt="Prayer"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4">
-          <div className="max-w-2xl">
-            <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
-              We&apos;re Here for You
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
-              Share Your Prayer Request
-            </h2>
-            <p className="text-lg text-white/85 leading-relaxed mb-4">
-              We believe in the power of prayer. Whether you&apos;re facing a
-              challenge, celebrating a blessing, or simply need someone to pray
-              with you — our church family is here.
-            </p>
-            <blockquote className="border-l-4 border-primary-light pl-4 mb-8">
-              <p className="text-white/75 italic text-base leading-relaxed">
-                &ldquo;Do not be anxious about anything, but in every situation,
-                by prayer and petition, with thanksgiving, present your requests
-                to God.&rdquo;
-              </p>
-              <cite className="text-primary-light text-sm not-italic font-semibold mt-2 block">
-                Philippians 4:6
-              </cite>
-            </blockquote>
-            <a
-              href="https://forms.gle/QRk1FSUSFnjAVumv7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                />
-              </svg>
-              Submit a Prayer Request
-            </a>
-          </div>
-        </div>
-      </section>
+      <PrayerRequestSection />
 
       {/* Bible Reading - GREEN */}
       <section className="bg-green-section py-20 relative overflow-hidden">
@@ -232,142 +177,8 @@ export default function Home() {
       {/* Latest Sermon - GREEN */}
       <LatestSermon />
 
-      {/* Service Times - CREAM */}
-      <section className="py-20 bg-light relative overflow-hidden">
-        {/* Subtle decorative background */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
-              Plan Your Visit
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
-              Visit Us at One of Our Services
-            </h2>
-            <div className="section-divider mb-6" />
-            <p className="text-gray-warm text-lg max-w-2xl mx-auto">
-              Whether it&apos;s your first time or you&apos;re looking for a church home, we&apos;d love to see you. Come as you are.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Sunday Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
-              <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-5 text-center">
-                <div className="flex items-center justify-center gap-3">
-                  <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                  <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-white">Sunday</h3>
-                </div>
-              </div>
-              <div className="p-8">
-                <div className="space-y-4 text-gray-warm">
-                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                    <div>
-                      <span className="font-semibold text-dark block">Sunday School</span>
-                      <span className="text-sm text-gray-warm">All ages welcome</span>
-                    </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">9:30 AM</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                    <div>
-                      <span className="font-semibold text-dark block">Morning Worship</span>
-                      <span className="text-sm text-gray-warm">Main service</span>
-                    </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">11:00 AM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <span className="font-semibold text-dark block">Evening Worship</span>
-                      <span className="text-sm text-gray-warm">Evening fellowship</span>
-                    </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">6:00 PM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Wednesday Card */}
-            <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
-              <div className="bg-gradient-to-r from-primary to-primary-dark px-8 py-5 text-center">
-                <div className="flex items-center justify-center gap-3">
-                  <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                  <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-white">Wednesday</h3>
-                </div>
-              </div>
-              <div className="p-8">
-                <div className="space-y-4 text-gray-warm">
-                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                    <div>
-                      <span className="font-semibold text-dark block">Prayer Meeting</span>
-                      <span className="text-sm text-gray-warm">Gather in prayer</span>
-                    </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">6:30 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                    <div>
-                      <span className="font-semibold text-dark block">Kids Bible Study</span>
-                      <span className="text-sm text-gray-warm">Ages 4&ndash;12</span>
-                    </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-gray-100 pb-4">
-                    <div>
-                      <span className="font-semibold text-dark block">Youth Bible Study</span>
-                      <span className="text-sm text-gray-warm">Teens</span>
-                    </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <span className="font-semibold text-dark block">Adult Bible Study</span>
-                      <span className="text-sm text-gray-warm">In-depth study</span>
-                    </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">7:00 PM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Location & CTA */}
-          <div className="mt-14 text-center">
-            <div className="inline-flex items-center gap-2 text-gray-warm mb-6">
-              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span className="text-dark font-semibold">1400 SE Lyngate Dr, Port St. Lucie, FL 34952</span>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-dark transition-colors duration-200"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-                Get Directions
-              </Link>
-              <a
-                href="tel:7722374907"
-                className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-8 py-4 rounded font-bold text-lg hover:bg-primary hover:text-white transition-colors duration-200"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Call (772) 237-4907
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Service Times */}
+      <ServiceTimesSection variant="light" />
 
       {/* Ministries Overview - WHITE */}
       <section className="py-20 bg-white">
@@ -381,14 +192,14 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-5xl mx-auto">
             {[
-              { title: "Children's Ministries", desc: "Nursery care and kids worship services for our youngest members.", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", color: "text-rose-500", bg: "bg-rose-50" },
-              { title: "Youth Groups", desc: "Bible study programs for middle and high school students.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z", color: "text-blue-500", bg: "bg-blue-50" },
-              { title: "Sunday School", desc: "Classes for all age groups to study God's Word together.", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253", color: "text-amber-500", bg: "bg-amber-50" },
-              { title: "Music Programs", desc: "Traditional hymns and worship music to glorify God.", icon: "M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3", color: "text-purple-500", bg: "bg-purple-50" },
-              { title: "Men's & Women's Groups", desc: "Fellowship and ministry opportunities for adults.", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z", color: "text-teal-500", bg: "bg-teal-50" },
-              { title: "Mission Trips", desc: "Serving communities across the Southeast United States.", icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z", color: "text-emerald-500", bg: "bg-emerald-50" },
+              { title: "Children's Ministries", desc: "Nursery care and kids worship services for our youngest members.", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", color: "text-rose-500", bg: "bg-rose-50", border: "border-rose-300" },
+              { title: "Youth Groups", desc: "Bible study programs for middle and high school students.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z", color: "text-blue-500", bg: "bg-blue-50", border: "border-blue-300" },
+              { title: "Sunday School", desc: "Classes for all age groups to study God's Word together.", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253", color: "text-amber-500", bg: "bg-amber-50", border: "border-amber-300" },
+              { title: "Music Programs", desc: "Traditional hymns and worship music to glorify God.", icon: "M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3", color: "text-purple-500", bg: "bg-purple-50", border: "border-purple-300" },
+              { title: "Men's & Women's Groups", desc: "Fellowship and ministry opportunities for adults.", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z", color: "text-teal-500", bg: "bg-teal-50", border: "border-teal-300" },
+              { title: "Mission Trips", desc: "Serving communities across the Southeast United States.", icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z", color: "text-emerald-500", bg: "bg-emerald-50", border: "border-emerald-300" },
             ].map((ministry) => (
-              <div key={ministry.title} className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+              <div key={ministry.title} className={`group bg-white rounded-2xl p-8 border ${ministry.border} hover:border-transparent hover:-translate-y-1 hover:shadow-xl transition-all duration-300`}>
                 <div className={`w-14 h-14 rounded-full ${ministry.bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-all duration-300`}>
                   <svg className={`w-7 h-7 ${ministry.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ministry.icon} />

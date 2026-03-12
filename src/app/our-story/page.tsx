@@ -192,6 +192,11 @@ export default function OurStory() {
                 </h3>
                 <p className="text-white/80 text-sm font-semibold">Senior Pastor</p>
               </div>
+              <div className="px-6 py-3 text-center">
+                <a href="mailto:nickmanzie@centralbaptistpsl.com" className="text-xs text-gray-warm hover:text-primary transition-colors">
+                  nickmanzie@centralbaptistpsl.com
+                </a>
+              </div>
             </div>
 
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-primary/20">
