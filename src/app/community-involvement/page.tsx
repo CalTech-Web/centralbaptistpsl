@@ -85,37 +85,83 @@ export default function CommunityInvolvement() {
         subtitle="Dedicated to serving our community through love and action"
       />
 
-      {/* Mission Statement */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
-            Serving Port St. Lucie
-          </h2>
-          <div className="section-divider mb-8" />
-          <p className="text-lg text-gray-warm leading-relaxed">
-            Central Baptist Church in Port St. Lucie, Florida is dedicated to
-            providing strong community involvement through its various
-            ministries. We strive to provide meaningful opportunities for our
-            members to give back to their communities through donations and
-            volunteerism.
-          </p>
+      {/* Mission Statement - with background image */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/com-involve-1.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="max-w-2xl">
+            <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
+              Our Mission
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
+              Serving Port St. Lucie
+            </h2>
+            <p className="text-lg text-white/85 leading-relaxed mb-4">
+              Central Baptist Church in Port St. Lucie, Florida is dedicated to
+              providing strong community involvement through its various
+              ministries. We strive to provide meaningful opportunities for our
+              members to give back to their communities through donations and
+              volunteerism.
+            </p>
+            <blockquote className="border-l-4 border-primary-light pl-4 mb-8">
+              <p className="text-white/75 italic text-base leading-relaxed">
+                &ldquo;Each of you should use whatever gift you have received to
+                serve others, as faithful stewards of God&apos;s grace.&rdquo;
+              </p>
+              <cite className="text-primary-light text-sm not-italic font-semibold mt-2 block">
+                1 Peter 4:10
+              </cite>
+            </blockquote>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              Get Involved
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Impact Stats */}
-      <section className="py-16 bg-light">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="py-16 bg-light relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
+        <div className="relative max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+              Our Impact
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark">
+              Making a Difference Since 1978
+            </h2>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: "45+", label: "Years Serving" },
-              { value: "17", label: "Mission Locations" },
-              { value: "4", label: "Active Ministries" },
-              { value: "1978", label: "Established" },
+              { value: "45+", label: "Years Serving", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
+              { value: "17", label: "Mission Locations", icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" },
+              { value: "4", label: "Active Ministries", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+              { value: "1978", label: "Established", icon: "M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" },
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                className="group bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1"
               >
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={stat.icon} />
+                  </svg>
+                </div>
                 <p className="text-3xl md:text-4xl font-bold text-primary mb-1">
                   {stat.value}
                 </p>
@@ -128,19 +174,86 @@ export default function CommunityInvolvement() {
         </div>
       </section>
 
+      {/* How We Serve - GREEN glass cards matching homepage ministries */}
+      <section className="bg-green-section py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z' fill='white' fill-opacity='1'/%3E%3C/svg%3E\")" }} />
+
+        {/* Decorative floating icons */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <svg className="absolute top-8 right-[8%] w-14 h-14 text-white/[0.06] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          <svg className="absolute bottom-10 left-[6%] w-10 h-10 text-white/[0.05] animate-icon-pulse" fill="none" stroke="currentColor" strokeWidth={1.2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <svg className="absolute top-1/2 right-[3%] w-8 h-8 text-white/[0.05] animate-icon-bounce" style={{ animationDelay: "0.6s" }} fill="none" stroke="currentColor" strokeWidth={1.2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+
+        <div className="relative max-w-5xl mx-auto px-4 z-10">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
+              How We Serve
+            </h2>
+            <div className="w-20 h-1 bg-white/60 mx-auto mb-5" />
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              From local outreach to international missions, there are many ways to make a difference at Central Baptist.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+            {serviceCards.map((item) => (
+              <div
+                key={item.title}
+                className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300"
+              >
+                <div className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                  <svg
+                    className="w-7 h-7 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d={item.icon}
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold font-[family-name:var(--font-playfair)] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white/75 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery with Lightbox */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
-            Our Community in Action
-          </h2>
-          <div className="section-divider mb-12" />
+          <div className="text-center mb-12">
+            <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+              See the Impact
+            </span>
+            <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
+              Our Community in Action
+            </h2>
+            <div className="section-divider mb-6" />
+            <p className="text-gray-warm text-lg max-w-2xl mx-auto">
+              A glimpse into how Central Baptist Church serves and connects with the Port St. Lucie community.
+            </p>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {galleryImages.map((img, i) => (
               <div
                 key={i}
-                className={`rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group ${
+                className={`rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group hover:-translate-y-1 ${
                   i === 0 || i === 5
                     ? "md:row-span-2 md:h-full"
                     : ""
@@ -179,87 +292,49 @@ export default function CommunityInvolvement() {
         </div>
       </section>
 
-      {/* Scripture Quote */}
-      <section className="py-16 bg-light">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <svg
-            className="w-10 h-10 text-primary/30 mx-auto mb-4"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
+      {/* CTA - GREEN with decorative icons */}
+      <section className="bg-green-section py-20 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <svg className="absolute top-6 left-[8%] w-16 h-16 text-white/[0.07] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" />
           </svg>
-          <blockquote className="text-2xl md:text-3xl font-[family-name:var(--font-playfair)] text-dark leading-relaxed mb-4">
-            &ldquo;Each of you should use whatever gift you have received to
-            serve others, as faithful stewards of God&apos;s grace.&rdquo;
-          </blockquote>
-          <cite className="text-primary font-semibold text-lg not-italic">
-            1 Peter 4:10
-          </cite>
+          <svg className="absolute top-10 right-[10%] w-14 h-14 text-white/[0.07] animate-icon-bounce" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          <svg className="absolute bottom-8 left-[12%] w-12 h-12 text-white/[0.07] animate-icon-pulse" style={{ animationDelay: "0.5s" }} fill="none" stroke="currentColor" strokeWidth={1.2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <svg className="absolute bottom-6 right-[12%] w-10 h-10 text-white/[0.05] animate-icon-spin-slow" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" />
+          </svg>
         </div>
-      </section>
 
-      {/* How We Serve */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
-            How We Serve
-          </h2>
-          <div className="section-divider mb-12" />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {serviceCards.map((item) => (
-              <div
-                key={item.title}
-                className="bg-light rounded-xl p-8 hover:shadow-lg transition-all duration-300 border border-transparent hover:border-primary/20"
-              >
-                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-5">
-                  <svg
-                    className="w-7 h-7 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={item.icon}
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-warm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-green-section text-center">
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="relative max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] mb-4">
             Get Involved Today
           </h2>
-          <p className="text-gray-200 mb-8 text-lg leading-relaxed">
+          <p className="text-white/90 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
             There are many ways to serve at Central Baptist Church. Whether
             through volunteering, donations, or joining one of our ministry
-            groups — your help makes a difference.
+            groups, your help makes a difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-block bg-white text-primary px-8 py-3 rounded font-bold hover:bg-light transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200"
             >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
               Contact Us
             </Link>
             <Link
               href="/mission-trips"
-              className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
             >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               View Mission Trips
             </Link>
           </div>
