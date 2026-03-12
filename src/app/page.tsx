@@ -370,13 +370,17 @@ export default function Home() {
       </section>
 
       {/* Ministries Overview - GREEN */}
-      <section className="bg-green-section py-20">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="bg-green-section py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z' fill='white' fill-opacity='1'/%3E%3C/svg%3E\")" }} />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">Our Ministries</h2>
-            <div className="w-20 h-1 bg-white/60 mx-auto" />
+            <div className="w-20 h-1 bg-white/60 mx-auto mb-5" />
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              There is a place for everyone at Central Baptist. Explore the many ways you can grow, serve, and connect.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-5xl mx-auto">
             {[
               { title: "Children's Ministries", desc: "Nursery care and kids worship services for our youngest members.", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", anim: "animate-icon-pulse" },
               { title: "Youth Groups", desc: "Bible study programs for middle and high school students.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z", anim: "animate-icon-float" },
@@ -385,19 +389,19 @@ export default function Home() {
               { title: "Men's & Women's Groups", desc: "Fellowship and ministry opportunities for adults.", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z", anim: "animate-icon-pulse" },
               { title: "Mission Trips", desc: "Serving communities across the Southeast United States.", icon: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z", anim: "animate-icon-spin-slow" },
             ].map((ministry) => (
-              <div key={ministry.title} className="group bg-white/10 rounded-2xl p-7 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10">
-                <div className="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mb-5 group-hover:bg-white/25 transition-all duration-300">
-                  <svg className={`w-8 h-8 text-white ${ministry.anim}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={ministry.title} className="group bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/15 hover:bg-white/[0.15] hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300">
+                <div className="w-14 h-14 rounded-full bg-white/15 flex items-center justify-center mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={ministry.icon} />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2">{ministry.title}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">{ministry.desc}</p>
+                <h3 className="text-lg font-bold font-[family-name:var(--font-playfair)] mb-2">{ministry.title}</h3>
+                <p className="text-white/75 text-sm leading-relaxed">{ministry.desc}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link href="/our-ministries" className="inline-block bg-white text-primary px-8 py-3 rounded font-bold hover:bg-light transition-colors duration-200">
+          <div className="text-center mt-12">
+            <Link href="/our-ministries" className="inline-block bg-white text-primary px-8 py-3.5 rounded-lg font-bold hover:bg-light hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">
               Explore Our Ministries
             </Link>
           </div>
