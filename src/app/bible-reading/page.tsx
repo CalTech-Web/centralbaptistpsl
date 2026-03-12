@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
   title: "Bible Reading Plans - Central Baptist Church",
@@ -66,8 +67,12 @@ export default function BibleReading() {
       />
 
       {/* Introduction Section - WHITE */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <ScrollReveal>
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center max-w-6xl mx-auto">
             <div>
               <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -91,7 +96,7 @@ export default function BibleReading() {
               </p>
               <Link
                 href="#plans"
-                className="inline-block bg-primary text-white px-6 py-3 rounded font-bold hover:bg-primary-dark transition-colors"
+                className="inline-block bg-primary text-white px-6 py-3 rounded font-bold hover:bg-primary-dark transition-colors btn-interact"
               >
                 Explore the Plans
               </Link>
@@ -129,8 +134,10 @@ export default function BibleReading() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Scripture Quote Section */}
+      <ScrollReveal>
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -171,8 +178,10 @@ export default function BibleReading() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Reading Plans Section - GREEN */}
+      <ScrollReveal>
       <section id="plans" className="bg-green-section py-20 relative overflow-hidden">
         {/* Decorative background icons */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -189,7 +198,7 @@ export default function BibleReading() {
 
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-3">
+            <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
               365-Day Plans
             </span>
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
@@ -225,8 +234,10 @@ export default function BibleReading() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* How to Get Started - CREAM */}
+      <ScrollReveal>
       <section className="py-20 bg-light">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -264,8 +275,10 @@ export default function BibleReading() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA Section - GREEN with decorative icons */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         {/* Decorative Background Icons */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -294,7 +307,7 @@ export default function BibleReading() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:centralbaptist2018@gmail.com"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -303,7 +316,7 @@ export default function BibleReading() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -314,6 +327,7 @@ export default function BibleReading() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </>
   );
 }

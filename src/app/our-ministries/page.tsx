@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import ScrollReveal from "@/components/ScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -86,6 +87,7 @@ export default function OurMinistries() {
       />
 
       {/* Intro - WHITE */}
+      <ScrollReveal>
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -112,7 +114,7 @@ export default function OurMinistries() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded font-bold hover:bg-primary-light transition-colors"
+                className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded font-bold hover:bg-primary-light transition-colors btn-interact"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -132,8 +134,10 @@ export default function OurMinistries() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Children & Youth - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <svg className="absolute top-8 right-[8%] w-14 h-14 text-white/[0.06] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
@@ -181,8 +185,10 @@ export default function OurMinistries() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Adult Ministries - WHITE */}
+      <ScrollReveal>
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.03] rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
@@ -232,8 +238,10 @@ export default function OurMinistries() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Worship & Outreach - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <svg className="absolute top-10 left-[6%] w-12 h-12 text-white/[0.06] animate-icon-bounce" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
@@ -273,8 +281,10 @@ export default function OurMinistries() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA - WHITE with decorative bg */}
+      <ScrollReveal>
       <section className="py-20 bg-light relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
@@ -300,7 +310,7 @@ export default function OurMinistries() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-dark transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-dark transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -309,7 +319,7 @@ export default function OurMinistries() {
             </Link>
             <a
               href="tel:7722374907"
-              className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-8 py-4 rounded font-bold text-lg hover:bg-primary hover:text-white transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-8 py-4 rounded font-bold text-lg hover:bg-primary hover:text-white transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -319,6 +329,7 @@ export default function OurMinistries() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </>
   );
 }

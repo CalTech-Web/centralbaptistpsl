@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
@@ -13,22 +14,23 @@ export default function Contact() {
       <PageHero title="Contact Us" subtitle="We would love to hear from you" image="/images/hero-contact.jpg" />
 
       {/* Contact Info - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute top-8 right-[8%] w-14 h-14 text-white/[0.06]" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
+          <svg className="absolute top-8 right-[8%] w-14 h-14 text-white/[0.06] animate-icon-float" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <svg className="absolute bottom-10 left-[6%] w-10 h-10 text-white/[0.05]" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
+          <svg className="absolute bottom-10 left-[6%] w-10 h-10 text-white/[0.05] animate-icon-pulse" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
-          <svg className="absolute top-1/2 right-[3%] w-8 h-8 text-white/[0.05]" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="absolute top-1/2 right-[3%] w-8 h-8 text-white/[0.05] animate-icon-bounce" fill="currentColor" viewBox="0 0 24 24">
             <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" />
           </svg>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-3">
+            <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
               Reach Out
             </span>
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
@@ -74,8 +76,10 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Send Us a Message - WHITE */}
+      <ScrollReveal>
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
@@ -150,8 +154,10 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Pastoral Staff - CREAM */}
+      <ScrollReveal>
       <section className="py-20 bg-light relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
@@ -252,20 +258,22 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Online Giving - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute top-6 left-[8%] w-16 h-16 text-white/[0.07]" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="absolute top-6 left-[8%] w-16 h-16 text-white/[0.07] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
             <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" />
           </svg>
-          <svg className="absolute bottom-8 right-[10%] w-12 h-12 text-white/[0.06]" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="absolute bottom-8 right-[10%] w-12 h-12 text-white/[0.06] animate-icon-pulse" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
           </svg>
         </div>
 
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-3">
+          <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
             Support Our Church
           </span>
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">

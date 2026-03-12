@@ -1,6 +1,7 @@
 "use client";
 
 import PageHero from "@/components/PageHero";
+import ScrollReveal from "@/components/ScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
@@ -87,6 +88,7 @@ export default function CommunityInvolvement() {
       />
 
       {/* Mission Statement - with background image */}
+      <ScrollReveal>
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -124,7 +126,7 @@ export default function CommunityInvolvement() {
             </blockquote>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors"
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -134,8 +136,10 @@ export default function CommunityInvolvement() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Impact Stats */}
+      <ScrollReveal>
       <section className="py-16 bg-light relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
         <div className="relative max-w-5xl mx-auto px-4">
@@ -174,8 +178,10 @@ export default function CommunityInvolvement() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* How We Serve - GREEN glass cards matching homepage ministries */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z' fill='white' fill-opacity='1'/%3E%3C/svg%3E\")" }} />
 
@@ -233,8 +239,10 @@ export default function CommunityInvolvement() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Photo Gallery with Lightbox */}
+      <ScrollReveal>
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -292,8 +300,10 @@ export default function CommunityInvolvement() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA - GREEN with decorative icons */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <svg className="absolute top-6 left-[8%] w-16 h-16 text-white/[0.07] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
@@ -322,7 +332,7 @@ export default function CommunityInvolvement() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -331,7 +341,7 @@ export default function CommunityInvolvement() {
             </Link>
             <Link
               href="/mission-trips"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -341,6 +351,7 @@ export default function CommunityInvolvement() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Lightbox */}
       {lightboxIndex !== null && (

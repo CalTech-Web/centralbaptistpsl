@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
   title: "Mission Trips - Central Baptist Church",
@@ -29,6 +30,7 @@ export default function MissionTrips() {
       />
 
       {/* Intro Section - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         {/* Decorative background icons */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -64,7 +66,7 @@ export default function MissionTrips() {
               </p>
               <a
                 href="mailto:centralbaptist2018@gmail.com"
-                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors"
+                className="inline-block bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors btn-interact"
               >
                 Join Our Next Mission
               </a>
@@ -105,8 +107,10 @@ export default function MissionTrips() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Scripture Section - Image Backed */}
+      <ScrollReveal>
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -144,7 +148,7 @@ export default function MissionTrips() {
             </blockquote>
             <Link
               href="/community-involvement"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors"
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary-light transition-colors btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -154,8 +158,10 @@ export default function MissionTrips() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Mission Locations - CREAM */}
+      <ScrollReveal>
       <section className="py-20 bg-light relative overflow-hidden">
         {/* Subtle decorative background */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -202,8 +208,10 @@ export default function MissionTrips() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* What We Do - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         {/* Decorative background icons */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -248,8 +256,10 @@ export default function MissionTrips() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA Section - GREEN with decorative icons */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         {/* Decorative Background Icons */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -276,7 +286,7 @@ export default function MissionTrips() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:centralbaptist2018@gmail.com"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -285,7 +295,7 @@ export default function MissionTrips() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -296,6 +306,7 @@ export default function MissionTrips() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
     </>
   );
 }

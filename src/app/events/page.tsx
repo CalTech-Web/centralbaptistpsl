@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import ScrollReveal from "@/components/ScrollReveal";
 import ServiceTimesSection from "@/components/ServiceTimesSection";
 import { useState, useEffect, useCallback } from "react";
 
@@ -76,6 +77,7 @@ export default function EventsPage() {
       />
 
       {/* Upcoming Events - WHITE */}
+      <ScrollReveal>
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -151,11 +153,13 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Service Times */}
       <ServiceTimesSection variant="green" />
 
       {/* Ways to Connect - CREAM */}
+      <ScrollReveal>
       <section className="py-20 bg-light relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
@@ -250,8 +254,10 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <svg className="absolute top-6 left-[8%] w-16 h-16 text-white/[0.07] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
@@ -273,19 +279,20 @@ export default function EventsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200"
+              className="bg-white text-primary px-8 py-4 rounded font-bold text-lg hover:bg-light transition-colors duration-200 btn-interact"
             >
               Get Directions
             </Link>
             <a
               href="tel:7722374907"
-              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
+              className="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
             >
               Call (772) 237-4907
             </a>
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Lightbox */}
       {lightboxIndex !== null && (
