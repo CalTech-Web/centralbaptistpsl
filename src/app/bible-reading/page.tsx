@@ -62,7 +62,7 @@ export default function BibleReading() {
       <PageHero
         title="Bible Reading Plans"
         subtitle="One of the best ways to know God is to become acquainted with the full counsel of His written Word"
-        image="/images/slider/adult-bible-study.jpg"
+        image="/images/hero-missions.jpg"
       />
 
       {/* Introduction Section - WHITE */}

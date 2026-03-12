@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import ScrollReveal from "@/components/ScrollReveal";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -57,9 +58,11 @@ export default function OurStory() {
       <PageHero
         title="Our Story"
         subtitle="From six couples in a living room to a thriving church family"
+        image="/images/hero-our-story.jpg"
       />
 
       {/* History Timeline - GREEN */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         {/* Decorative background icons */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -76,7 +79,7 @@ export default function OurStory() {
 
         <div className="relative max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-3">
+            <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
               Our Heritage
             </span>
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4 animate-fade-in-up">
@@ -103,10 +106,16 @@ export default function OurStory() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Pastor Section */}
-      <section className="py-20 bg-light">
-        <div className="max-w-5xl mx-auto px-4">
+      <ScrollReveal>
+      <section className="py-20 bg-light relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
               Our Leadership
@@ -162,10 +171,16 @@ export default function OurStory() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* Staff Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
+      <ScrollReveal>
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
               Our Team
@@ -249,8 +264,10 @@ export default function OurStory() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* CTA Section - GREEN with decorative icons */}
+      <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
         {/* Decorative Background Icons */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">

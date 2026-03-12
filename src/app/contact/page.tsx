@@ -10,7 +10,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <>
-      <PageHero title="Contact Us" subtitle="We would love to hear from you" />
+      <PageHero title="Contact Us" subtitle="We would love to hear from you" image="/images/hero-contact.jpg" />
 
       {/* Contact Info - GREEN */}
       <section className="bg-green-section py-20 relative overflow-hidden">

@@ -72,7 +72,7 @@ export default function EventsPage() {
       <PageHero
         title="Events"
         subtitle="See what's happening at Central Baptist Church"
-        image="/images/slider/easter-sunday.jpg"
+        image="/images/hero-events.jpg"
       />
 
       {/* Upcoming Events - WHITE */}

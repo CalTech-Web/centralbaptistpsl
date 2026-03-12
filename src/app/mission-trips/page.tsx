@@ -25,7 +25,7 @@ export default function MissionTrips() {
       <PageHero
         title="Mission Trips"
         subtitle="Serving communities across the Southeast since 2001"
-        image="/images/slider/israel-trip.jpg"
+        image="/images/hero-missions.jpg"
       />
 
       {/* Intro Section - GREEN */}

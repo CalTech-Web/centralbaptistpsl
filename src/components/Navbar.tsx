@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/community-involvement", label: "Community" },
   { href: "/mission-trips", label: "Missions" },
   { href: "/bible-reading", label: "Bible Reading" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
