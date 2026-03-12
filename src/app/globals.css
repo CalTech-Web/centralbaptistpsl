@@ -231,6 +231,16 @@ html {
   transform: scaleX(1);
 }
 
+/* ===== SOFT GLOW PULSE ===== */
+@keyframes softGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(94, 155, 107, 0.1); }
+  50% { box-shadow: 0 0 35px rgba(94, 155, 107, 0.25); }
+}
+
+.animate-soft-glow {
+  animation: softGlow 4s ease-in-out infinite;
+}
+
 /* ===== RESPECT REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   *,
