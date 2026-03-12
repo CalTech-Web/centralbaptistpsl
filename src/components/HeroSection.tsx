@@ -47,35 +47,39 @@ export default function HeroSection() {
         {/* Scrolling Ticker */}
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/50 backdrop-blur-sm overflow-hidden">
           <div className="ticker-track flex items-center whitespace-nowrap py-3">
-            {[...Array(10)].map((_, i) => (
+            {[...Array(8)].map((_, i) => (
               <div key={i} className="flex items-center shrink-0">
-                <a
-                  href="https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
-                >
-                  <span className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
-                  <span className="font-semibold text-sm tracking-wide uppercase">Watch</span>
-                </a>
-                <a
-                  href="https://tithe.ly/give?c=1379702"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
-                >
-                  <span className="w-2 h-2 rounded-full bg-green-500 shrink-0" />
-                  <span className="font-semibold text-sm tracking-wide uppercase">Give</span>
-                </a>
-                <a
-                  href="https://forms.gle/QRk1FSUSFnjAVumv7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
-                >
-                  <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0" />
-                  <span className="font-semibold text-sm tracking-wide uppercase">Prayer</span>
-                </a>
+                {[
+                  { label: "Watch", href: "https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ" },
+                  { label: "Give", href: "https://tithe.ly/give?c=1379702" },
+                  { label: "Prayer", href: "https://forms.gle/QRk1FSUSFnjAVumv7" },
+                  { label: "Events", href: "/events", internal: true },
+                  { label: "Visit Us", href: "/contact", internal: true },
+                  { label: "Ministries", href: "/our-ministries", internal: true },
+                  { label: "Bible Reading", href: "/bible-reading", internal: true },
+                ].map((item) => (
+                  <span key={item.label} className="shrink-0">
+                    {item.internal ? (
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
+                      >
+                        <svg className="w-3 h-3 text-yellow-300 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" /></svg>
+                        <span className="font-semibold text-sm tracking-wide uppercase">{item.label}</span>
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-6 text-white hover:text-yellow-300 transition-colors duration-200"
+                      >
+                        <svg className="w-3 h-3 text-yellow-300 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" /></svg>
+                        <span className="font-semibold text-sm tracking-wide uppercase">{item.label}</span>
+                      </a>
+                    )}
+                  </span>
+                ))}
               </div>
             ))}
           </div>
