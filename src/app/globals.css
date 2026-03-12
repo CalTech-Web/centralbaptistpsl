@@ -95,3 +95,23 @@ html {
 .slider-track:hover {
   animation-play-state: paused;
 }
+
+/* Pulsing dot for upcoming events */
+@keyframes pulseDot {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulseDot 1.5s ease-out infinite;
+}

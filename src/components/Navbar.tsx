@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex flex-col items-start justify-center">
             <Image
               src="/images/Central-Logo-300x182-1.png"
               alt="Central Baptist Church"
@@ -29,7 +29,7 @@ export default function Navbar() {
               height={30}
               className="w-auto h-10"
             />
-            <span className="hidden sm:block text-xs font-semibold tracking-wide">
+            <span className="hidden sm:block text-[10px] font-semibold tracking-wide mt-0.5">
               <span className="text-dark">One Family, </span>
               <span className="text-[#7B1A1A]">Called by Christ</span>
               <span className="text-dark">, Sent to Serve</span>

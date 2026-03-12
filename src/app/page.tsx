@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import LatestSermon from "@/components/LatestSermon";
-import EventsCarousel from "@/components/EventsCarousel";
-import ImageSlider from "@/components/ImageSlider";
 import HeroSection from "@/components/HeroSection";
+import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 
 export default function Home() {
   return (
@@ -11,21 +10,8 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Image Slider */}
-      <ImageSlider />
-
-      {/* Upcoming Events - WHITE */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4">
-              Upcoming Events
-            </h2>
-            <div className="section-divider" />
-          </div>
-          <EventsCarousel />
-        </div>
-      </section>
+      {/* Upcoming Events Section */}
+      <UpcomingEventsSection />
 
       {/* Welcome Section - GREEN */}
       <section className="bg-green-section py-20">
