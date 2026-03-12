@@ -89,9 +89,6 @@ export default function OurMinistries() {
       {/* Intro - WHITE */}
       <ScrollReveal>
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        </div>
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
@@ -139,14 +136,6 @@ export default function OurMinistries() {
       {/* Children & Youth - GREEN */}
       <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute top-8 right-[8%] w-14 h-14 text-white/[0.06] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-          </svg>
-          <svg className="absolute bottom-10 left-[5%] w-10 h-10 text-white/[0.05] animate-icon-pulse" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-          </svg>
-        </div>
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
@@ -190,9 +179,6 @@ export default function OurMinistries() {
       {/* Adult Ministries - WHITE */}
       <ScrollReveal>
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.03] rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-        </div>
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
@@ -243,14 +229,6 @@ export default function OurMinistries() {
       {/* Worship & Outreach - GREEN */}
       <ScrollReveal>
       <section className="bg-green-section py-20 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <svg className="absolute top-10 left-[6%] w-12 h-12 text-white/[0.06] animate-icon-bounce" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-          </svg>
-          <svg className="absolute bottom-8 right-[8%] w-14 h-14 text-white/[0.05] animate-icon-float" style={{ animationDelay: '0.5s' }} fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-white/60 text-sm font-semibold uppercase tracking-widest mb-3">
@@ -286,15 +264,6 @@ export default function OurMinistries() {
       {/* CTA - WHITE with decorative bg */}
       <ScrollReveal>
       <section className="py-20 bg-light relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/[0.03] rounded-full blur-3xl" />
-          <svg className="absolute top-8 left-[10%] w-12 h-12 text-primary/[0.06] animate-icon-float" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7z" />
-          </svg>
-          <svg className="absolute bottom-8 right-[10%] w-10 h-10 text-primary/[0.06] animate-icon-pulse" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-        </div>
         <div className="relative max-w-3xl mx-auto px-4 text-center">
           <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
             Join Our Family
