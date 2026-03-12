@@ -127,14 +127,17 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
           <p>&copy; {new Date().getFullYear()} Central Baptist Church of Port St. Lucie. All rights reserved.</p>
-          <a
-            href="https://caltechweb.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            Powered by CalTech Web
-          </a>
+          <span>
+            Built by{" "}
+            <a
+              href="https://caltechweb.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors underline"
+            >
+              CalTech Web
+            </a>
+          </span>
         </div>
       </div>
     </footer>

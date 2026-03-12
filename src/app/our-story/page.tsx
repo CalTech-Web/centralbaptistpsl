@@ -61,22 +61,24 @@ export default function OurStory() {
       {/* History Timeline */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
+          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center animate-fade-in-up">
             History
           </h2>
-          <div className="section-divider mb-12" />
+          <div className="section-divider mb-12 animate-fade-in-up-delay" />
 
           <div className="relative border-l-4 border-primary pl-8 space-y-10">
             {timeline.map((event) => (
-              <div key={event.year} className="relative">
-                <div className="absolute -left-[2.85rem] top-1 w-5 h-5 bg-primary rounded-full border-4 border-white" />
-                <span className="text-primary font-bold text-sm tracking-wider uppercase">
-                  {event.year}
-                </span>
-                <h3 className="text-xl font-bold text-dark mt-1 mb-2 font-[family-name:var(--font-playfair)]">
-                  {event.title}
-                </h3>
-                <p className="text-gray-warm leading-relaxed text-lg">{event.text}</p>
+              <div key={event.year} className="timeline-item relative group cursor-default">
+                <div className="timeline-dot absolute -left-[2.85rem] top-1 w-5 h-5 bg-primary rounded-full border-4 border-white transition-transform duration-300 group-hover:scale-125" />
+                <div className="transition-transform duration-300 group-hover:translate-x-2">
+                  <span className="text-primary font-bold text-sm tracking-wider uppercase">
+                    {event.year}
+                  </span>
+                  <h3 className="text-xl font-bold text-dark mt-1 mb-2 font-[family-name:var(--font-playfair)]">
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-warm leading-relaxed text-lg">{event.text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -86,19 +88,19 @@ export default function OurStory() {
       {/* Pastor Section */}
       <section className="py-20 bg-light">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
+          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center animate-fade-in-up">
             Our Pastor
           </h2>
-          <div className="section-divider mb-12" />
+          <div className="section-divider mb-12 animate-fade-in-up-delay" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="rounded-xl overflow-hidden shadow-lg">
+            <div className="rounded-xl overflow-hidden shadow-lg ring-4 ring-primary/20 hover:ring-primary/40 transition-all duration-300 hover:shadow-xl">
               <Image
                 src="/images/pastor-1030x771-1-1024x767.jpg"
                 alt="Dr. Nick Manzie"
                 width={600}
                 height={450}
-                className="w-full h-auto"
+                className="w-full h-auto transition-transform duration-500 hover:scale-105"
               />
             </div>
             <div>
@@ -139,13 +141,13 @@ export default function OurStory() {
       {/* Staff Section */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center">
+          <h2 className="text-3xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-4 text-center animate-fade-in-up">
             Our Staff
           </h2>
-          <div className="section-divider mb-12" />
+          <div className="section-divider mb-12 animate-fade-in-up-delay" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-light rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div className="bg-light rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="aspect-square relative">
                 <Image
                   src="/images/Pastor-Nick.jpg"
@@ -162,7 +164,7 @@ export default function OurStory() {
               </div>
             </div>
 
-            <div className="bg-light rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div className="bg-light rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="aspect-square relative">
                 <Image
                   src="/images/don-reid.jpg"
@@ -184,7 +186,7 @@ export default function OurStory() {
               </div>
             </div>
 
-            <div className="bg-light rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div className="bg-light rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="aspect-square relative">
                 <Image
                   src="/images/jessica-manzie.jpg"
