@@ -103,7 +103,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`xl:hidden p-2 rounded transition-colors duration-300 ${
+            className={`xl:hidden p-3 rounded transition-colors duration-300 ${
               scrolled
                 ? "text-dark hover:bg-light"
                 : "text-white hover:bg-white/20"

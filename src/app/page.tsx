@@ -56,6 +56,7 @@ export default function Home() {
                 width={600}
                 height={400}
                 className="w-full h-auto"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -215,6 +216,7 @@ export default function Home() {
                     width={600}
                     height={450}
                     className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>
