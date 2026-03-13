@@ -25,19 +25,6 @@ const images = [
   { src: "/images/slider/youtube.jpg", alt: "Watch on YouTube", gradient: "from-red-600/85" },
 ];
 
-const events = [
-  { title: "Food Giveaway", color: "bg-green-100 text-green-800", dot: "bg-green-500" },
-  { title: "Unity Sunday", color: "bg-blue-100 text-blue-800", dot: "bg-blue-500" },
-  { title: "Easter Eggstravaganza", color: "bg-pink-100 text-pink-800", dot: "bg-pink-500" },
-  { title: "Easter Sunday", color: "bg-purple-100 text-purple-800", dot: "bg-purple-500" },
-  { title: "Israel Trip", color: "bg-amber-100 text-amber-800", dot: "bg-amber-500" },
-  { title: "God is the Creator", color: "bg-orange-100 text-orange-800", dot: "bg-orange-500" },
-  { title: "Promises", color: "bg-rose-100 text-rose-800", dot: "bg-rose-500" },
-  { title: "Wisdom from God", color: "bg-sky-100 text-sky-800", dot: "bg-sky-500" },
-  { title: "Adult Sunday School", color: "bg-violet-100 text-violet-800", dot: "bg-violet-500" },
-  { title: "Adult Bible Study", color: "bg-indigo-100 text-indigo-800", dot: "bg-indigo-500" },
-  { title: "Church Bus", color: "bg-teal-100 text-teal-800", dot: "bg-teal-500" },
-];
 
 const previewImages = images.slice(0, 6);
 
@@ -59,26 +46,6 @@ export default function UpcomingEventsSection() {
             and fellowship to Bible study and worship, there&apos;s always something
             meaningful happening at Central Baptist Church.
           </p>
-        </div>
-
-        {/* Event Tags */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-10">
-          {events.map((event) => (
-            <div
-              key={event.title}
-              className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm`}
-            >
-              <span className="relative flex h-2.5 w-2.5">
-                <span
-                  className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`}
-                />
-                <span
-                  className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`}
-                />
-              </span>
-              {event.title}
-            </div>
-          ))}
         </div>
 
         {/* Image Grid - 3 columns, 2 rows */}
