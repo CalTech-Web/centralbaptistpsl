@@ -109,8 +109,8 @@ export default function MissionTrips() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 animate-ken-burns">
           <Image
-            src="/images/com-involve-3.jpg"
-            alt="Mission work"
+            src="/images/hero-our-story.jpg"
+            alt="Central Baptist Church"
             fill
             className="object-cover"
             sizes="100vw"
