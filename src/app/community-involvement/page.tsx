@@ -140,7 +140,7 @@ export default function CommunityInvolvement() {
                 key={stat.label}
                 className="group bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 animate-icon-float group-hover:scale-110 transition-all duration-300">
                   <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={stat.icon} />
                   </svg>
@@ -178,7 +178,7 @@ export default function CommunityInvolvement() {
                 key={item.title}
                 className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center mb-5 animate-icon-float group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -265,41 +265,30 @@ export default function CommunityInvolvement() {
       </section>
       </ScrollReveal>
 
-      {/* CTA - GREEN with decorative icons */}
-      <ScrollReveal>
-      <section className="bg-green-section py-24 relative overflow-hidden">
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-4">
-            Get Involved Today
-          </h2>
-          <p className="text-white/90 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
-            There are many ways to serve at Central Baptist Church. Whether
-            through volunteering, donations, or joining one of our ministry
-            groups, your help makes a difference.
+      {/* CTA - Image background with green overlay */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 animate-ken-burns">
+          <Image src="/images/hero-contact.jpg" alt="" fill className="object-cover" aria-hidden="true" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2a5435]/90 via-primary/85 to-[#2a5435]/90" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-4">Make a Difference</span>
+          <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] mb-6 leading-tight">Get Involved Today</h2>
+          <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            There are many ways to serve at Central Baptist Church. Whether through volunteering, donations, or joining one of our ministry groups, your help makes a difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-light transition-all duration-200 btn-interact"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg shadow-lg btn-interact">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               Contact Us
             </Link>
-            <Link
-              href="/mission-trips"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+            <Link href="/mission-trips" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               View Mission Trips
             </Link>
           </div>
         </div>
       </section>
-      </ScrollReveal>
 
       {/* Lightbox */}
       {lightboxIndex !== null && (

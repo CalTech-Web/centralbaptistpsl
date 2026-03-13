@@ -198,7 +198,7 @@ export default function BibleReading() {
                 className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300"
               >
                 <div className="p-8 text-center">
-                  <div className="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                  <div className="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mx-auto mb-5 animate-icon-float group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
                     <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={plan.icon} />
                     </svg>
@@ -243,7 +243,7 @@ export default function BibleReading() {
                 <span className="inline-block text-primary/20 text-5xl font-bold font-[family-name:var(--font-playfair)] mb-3">
                   {step.number}
                 </span>
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-5 animate-icon-float group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={step.icon} />
                   </svg>
@@ -261,41 +261,30 @@ export default function BibleReading() {
       </section>
       </ScrollReveal>
 
-      {/* CTA Section - GREEN with decorative icons */}
-      <ScrollReveal>
-      <section className="bg-green-section py-24 relative overflow-hidden">
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
-            Start Reading Today
-          </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Contact the church office to receive a printed copy of any reading plan,
-            or visit us on Sunday to pick one up. We&apos;d love to read alongside you.
+      {/* CTA - Image background with green overlay */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 animate-ken-burns">
+          <Image src="/images/hero-contact.jpg" alt="" fill className="object-cover" aria-hidden="true" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2a5435]/90 via-primary/85 to-[#2a5435]/90" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <span className="inline-block text-white/70 text-sm font-semibold uppercase tracking-widest mb-4">Begin Your Journey</span>
+          <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] mb-6 leading-tight">Start Reading Today</h2>
+          <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            Contact the church office to receive a printed copy of any reading plan, or visit us on Sunday to pick one up. We&apos;d love to read alongside you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:centralbaptist2018@gmail.com"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:bg-light transition-all duration-200 btn-interact"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
+            <a href="mailto:centralbaptist2018@gmail.com" className="inline-flex items-center justify-center gap-2 bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg shadow-lg btn-interact">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               Request a Reading Plan
             </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               Visit Us Sunday
             </Link>
           </div>
         </div>
       </section>
-      </ScrollReveal>
     </>
   );
 }
