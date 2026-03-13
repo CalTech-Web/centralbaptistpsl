@@ -8,20 +8,20 @@ import ServiceTimesSection from "@/components/ServiceTimesSection";
 import { useState, useEffect, useCallback } from "react";
 
 const images = [
-  { src: "/images/slider/easter-eggstravaganza.jpg", alt: "Easter Eggstravaganza" },
-  { src: "/images/slider/easter-sunday.jpg", alt: "Easter Sunday" },
-  { src: "/images/slider/unity-sunday.jpg", alt: "Unity Sunday" },
-  { src: "/images/slider/israel-trip.jpg", alt: "Israel Trip" },
-  { src: "/images/slider/food-giveaway.jpg", alt: "Food Giveaway" },
-  { src: "/images/slider/church-bus.jpg", alt: "Church Bus Ministry" },
-  { src: "/images/slider/adult-bible-study.jpg", alt: "Adult Bible Study" },
-  { src: "/images/slider/god-creator.jpg", alt: "God is the Creator" },
-  { src: "/images/slider/promises.jpg", alt: "Promises" },
-  { src: "/images/slider/wisdom-from-god.jpg", alt: "Wisdom from God" },
-  { src: "/images/slider/adult-sunday-school.jpg", alt: "Adult Sunday School" },
-  { src: "/images/slider/nursery.jpg", alt: "Nursery" },
-  { src: "/images/slider/revelation.jpg", alt: "Revelation" },
-  { src: "/images/slider/youtube.jpg", alt: "Watch on YouTube" },
+  { src: "/images/slider/easter-eggstravaganza.jpg", alt: "Easter Eggstravaganza", gradient: "from-pink-600/85" },
+  { src: "/images/slider/easter-sunday.jpg", alt: "Easter Sunday", gradient: "from-purple-600/85" },
+  { src: "/images/slider/unity-sunday.jpg", alt: "Unity Sunday", gradient: "from-blue-600/85" },
+  { src: "/images/slider/israel-trip.jpg", alt: "Israel Trip", gradient: "from-amber-600/85" },
+  { src: "/images/slider/food-giveaway.jpg", alt: "Food Giveaway", gradient: "from-green-600/85" },
+  { src: "/images/slider/church-bus.jpg", alt: "Church Bus Ministry", gradient: "from-teal-600/85" },
+  { src: "/images/slider/adult-bible-study.jpg", alt: "Adult Bible Study", gradient: "from-indigo-600/85" },
+  { src: "/images/slider/god-creator.jpg", alt: "God is the Creator", gradient: "from-orange-600/85" },
+  { src: "/images/slider/promises.jpg", alt: "Promises", gradient: "from-rose-600/85" },
+  { src: "/images/slider/wisdom-from-god.jpg", alt: "Wisdom from God", gradient: "from-sky-600/85" },
+  { src: "/images/slider/adult-sunday-school.jpg", alt: "Adult Sunday School", gradient: "from-violet-600/85" },
+  { src: "/images/slider/nursery.jpg", alt: "Nursery", gradient: "from-emerald-600/85" },
+  { src: "/images/slider/revelation.jpg", alt: "Revelation", gradient: "from-red-600/85" },
+  { src: "/images/slider/youtube.jpg", alt: "Watch on YouTube", gradient: "from-red-600/85" },
 ];
 
 const events = [
@@ -145,7 +145,7 @@ export default function EventsPage() {
                     />
                   </svg>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${img.gradient} to-transparent p-3`}>
                   <p className="text-white text-sm font-semibold">{img.alt}</p>
                 </div>
               </div>
