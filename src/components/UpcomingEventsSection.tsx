@@ -80,13 +80,13 @@ export default function UpcomingEventsSection() {
           {previewImages.map((img) => (
             <div
               key={img.src}
-              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group"
+              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group bg-gray-100"
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-contain group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 50vw, 400px"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
