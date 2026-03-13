@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import LatestSermon from "@/components/LatestSermon";
 import HeroSection from "@/components/HeroSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import ScrollReveal from "@/components/ScrollReveal";
+
+export const metadata: Metadata = {
+  title: "Central Baptist Church | Port St. Lucie, FL",
+  description:
+    "Welcome to Central Baptist Church of Port St. Lucie. One Family, Called by Christ, Sent to Serve. Sunday School 9:30 AM, Morning Worship 11:00 AM, Evening Worship 6:00 PM.",
+};
 
 export default function Home() {
   return (
