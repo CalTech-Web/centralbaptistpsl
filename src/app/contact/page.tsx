@@ -71,7 +71,7 @@ export default function Contact() {
       <ScrollReveal>
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 animate-ken-burns">
-          <Image src="/images/CBPSL-image-6.jpg" alt="Church sanctuary" fill className="object-cover" sizes="100vw" />
+          <Image src="/images/place-to-call-home.jpg" alt="Church sanctuary" fill className="object-cover" sizes="100vw" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/50" />
         <div className="relative z-10 max-w-7xl mx-auto px-4">
