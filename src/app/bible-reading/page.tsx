@@ -133,10 +133,10 @@ export default function BibleReading() {
       </section>
       </ScrollReveal>
 
-      {/* Scripture Quote Section */}
+      {/* Scripture Quote Section - Image Backed Two-Column */}
       <ScrollReveal>
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 animate-ken-burns">
           <Image
             src="/images/prayer-request.jpg"
             alt="Bible"
@@ -144,34 +144,87 @@ export default function BibleReading() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4">
-          <div className="max-w-2xl">
-            <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
-              The Power of Scripture
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
-              A Lamp to Your Feet
-            </h2>
-            <blockquote className="border-l-4 border-primary-light pl-4 mb-6">
-              <p className="text-white/85 italic text-lg leading-relaxed">
-                &ldquo;Your word is a lamp for my feet, a light on my path.&rdquo;
+        <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/50" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Text Content */}
+            <div>
+              <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
+                The Power of Scripture
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
+                A Lamp to Your Feet
+              </h2>
+              <p className="text-lg text-white/85 leading-relaxed mb-8">
+                God&apos;s Word illuminates our path, guides our decisions, and transforms our hearts. Through daily reading, we draw closer to Him and discover His purpose for our lives.
               </p>
-              <cite className="text-primary-light text-sm not-italic font-semibold mt-2 block">
-                Psalm 119:105
-              </cite>
-            </blockquote>
-            <blockquote className="border-l-4 border-primary-light pl-4 mb-8">
-              <p className="text-white/85 italic text-lg leading-relaxed">
-                &ldquo;All Scripture is God-breathed and is useful for teaching, rebuking,
-                correcting and training in righteousness, so that the servant of God may be
-                thoroughly equipped for every good work.&rdquo;
-              </p>
-              <cite className="text-primary-light text-sm not-italic font-semibold mt-2 block">
-                2 Timothy 3:16-17
-              </cite>
-            </blockquote>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="#plans"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg btn-interact"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  Start Reading Today
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Request a Plan
+                </Link>
+              </div>
+            </div>
+
+            {/* Right - Scripture Glass Cards */}
+            <div className="space-y-6">
+              <div className="bg-white/[0.08] backdrop-blur-md rounded-2xl p-8 border border-white/20 animate-soft-glow">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-white font-bold text-lg font-[family-name:var(--font-playfair)]">Light for the Path</h3>
+                </div>
+                <blockquote>
+                  <p className="text-white/90 italic text-lg leading-relaxed">
+                    &ldquo;Your word is a lamp for my feet, a light on my path.&rdquo;
+                  </p>
+                </blockquote>
+                <div className="flex items-center gap-3 mt-4">
+                  <div className="w-8 h-[2px] bg-primary-light/60" />
+                  <cite className="text-primary-light text-sm not-italic font-semibold">Psalm 119:105</cite>
+                </div>
+              </div>
+
+              <div className="bg-white/[0.08] backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-white font-bold text-lg font-[family-name:var(--font-playfair)]">God-Breathed Word</h3>
+                </div>
+                <blockquote>
+                  <p className="text-white/90 italic text-lg leading-relaxed">
+                    &ldquo;All Scripture is God-breathed and is useful for teaching, rebuking,
+                    correcting and training in righteousness, so that the servant of God may be
+                    thoroughly equipped for every good work.&rdquo;
+                  </p>
+                </blockquote>
+                <div className="flex items-center gap-3 mt-4">
+                  <div className="w-8 h-[2px] bg-primary-light/60" />
+                  <cite className="text-primary-light text-sm not-italic font-semibold">2 Timothy 3:16-17</cite>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

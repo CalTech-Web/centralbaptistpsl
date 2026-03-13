@@ -104,10 +104,10 @@ export default function MissionTrips() {
       </section>
       </ScrollReveal>
 
-      {/* Scripture Section - Image Backed */}
+      {/* Called to Serve - Image Backed Two-Column */}
       <ScrollReveal>
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 animate-ken-burns">
           <Image
             src="/images/com-involve-3.jpg"
             alt="Mission work"
@@ -115,41 +115,70 @@ export default function MissionTrips() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4">
-          <div className="max-w-2xl">
-            <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
-              Our Calling
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
-              Called to Serve
-            </h2>
-            <p className="text-lg text-white/85 leading-relaxed mb-4">
-              Mission trips are at the heart of what we do. We believe that
-              faith is best expressed through action — rebuilding homes,
-              feeding the hungry, and sharing the hope of Christ with those
-              who need it most.
-            </p>
-            <blockquote className="border-l-4 border-primary-light pl-4 mb-8">
-              <p className="text-white/75 italic text-base leading-relaxed">
-                &ldquo;Therefore go and make disciples of all nations, baptizing
-                them in the name of the Father and of the Son and of the Holy
-                Spirit.&rdquo;
+        <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/50" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Text Content */}
+            <div>
+              <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
+                Our Calling
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
+                Called to Serve
+              </h2>
+              <p className="text-lg text-white/85 leading-relaxed mb-8">
+                Mission trips are at the heart of what we do. We believe that
+                faith is best expressed through action — rebuilding homes,
+                feeding the hungry, and sharing the hope of Christ with those
+                who need it most.
               </p>
-              <cite className="text-primary-light text-sm not-italic font-semibold mt-2 block">
-                Matthew 28:19
-              </cite>
-            </blockquote>
-            <Link
-              href="/community-involvement"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-light transition-colors btn-interact"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              See Our Community Work
-            </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/community-involvement"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg btn-interact"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  See Our Community Work
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                  Join a Trip
+                </Link>
+              </div>
+            </div>
+
+            {/* Right - Scripture Glass Card */}
+            <div className="bg-white/[0.08] backdrop-blur-md rounded-2xl p-8 md:p-10 border border-white/20 animate-soft-glow">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center animate-icon-float">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="text-white font-bold text-xl font-[family-name:var(--font-playfair)]">The Great Commission</h3>
+              </div>
+              <blockquote className="mb-6">
+                <p className="text-white/90 italic text-lg leading-relaxed">
+                  &ldquo;Therefore go and make disciples of all nations, baptizing
+                  them in the name of the Father and of the Son and of the Holy
+                  Spirit.&rdquo;
+                </p>
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-[2px] bg-primary-light/60" />
+                <cite className="text-primary-light text-sm not-italic font-semibold">
+                  Matthew 28:19
+                </cite>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -67,10 +67,73 @@ export default function Contact() {
       </section>
       </ScrollReveal>
 
+      {/* Scripture Banner - Image Backed */}
+      <ScrollReveal>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 animate-ken-burns">
+          <Image src="/images/CBPSL-image-6.jpg" alt="Church sanctuary" fill className="object-cover" sizes="100vw" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/50" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block text-primary-light text-sm font-semibold uppercase tracking-widest mb-4">
+                You Belong Here
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-white mb-6 leading-tight">
+                A Place to Call Home
+              </h2>
+              <p className="text-lg text-white/85 leading-relaxed mb-8">
+                Whether you have a question, need prayer, or just want to learn more about our church family — we&apos;re here for you. No matter where you are on your faith journey, you are always welcome.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:7722374907" className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg btn-interact">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call Us Today
+                </a>
+                <a href="#message" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-colors duration-200 btn-interact">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Send a Message
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-white/[0.08] backdrop-blur-md rounded-2xl p-8 md:p-10 border border-white/20 animate-soft-glow">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center animate-icon-float">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-white font-bold text-xl font-[family-name:var(--font-playfair)]">Our Promise</h3>
+              </div>
+              <blockquote>
+                <p className="text-white/90 italic text-lg leading-relaxed">
+                  &ldquo;Come to me, all you who are weary and burdened, and I will give you rest.&rdquo;
+                </p>
+              </blockquote>
+              <div className="flex items-center gap-3 mt-4">
+                <div className="w-8 h-[2px] bg-primary-light/60" />
+                <cite className="text-primary-light text-sm not-italic font-semibold">Matthew 11:28</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </ScrollReveal>
+
       {/* Send Us a Message - WHITE */}
       <ScrollReveal>
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
+      <section id="message" className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/[0.02] rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+        </div>
+        <div className="relative max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             {/* Form */}
             <div>
@@ -81,7 +144,7 @@ export default function Contact() {
                 We&apos;d Love to Hear From You
               </h2>
               <div className="section-divider !mx-0 mb-8" />
-              <div className="bg-light rounded-2xl p-8">
+              <div className="bg-light rounded-2xl p-8 border border-gray-100">
                 <ContactForm />
               </div>
             </div>
@@ -146,9 +209,12 @@ export default function Contact() {
       </ScrollReveal>
 
       {/* Pastoral Staff - CREAM */}
-      <ScrollReveal>
-      <section className="py-24 bg-light">
-        <div className="max-w-7xl mx-auto px-4">
+      <ScrollReveal stagger>
+      <section className="py-24 bg-light relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/[0.03] rounded-full blur-3xl translate-y-1/2 translate-x-1/4" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <span className="inline-block text-primary text-sm font-semibold uppercase tracking-widest mb-3">
               Our Team
@@ -163,75 +229,73 @@ export default function Contact() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all">
-                  <Image src="/images/Pastor-Nick.jpg" alt="Pastor Nick Manzie" width={56} height={56} className="w-full h-full object-cover" />
+            <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all mb-4">
+                  <Image src="/images/Pastor-Nick.jpg" alt="Pastor Nick Manzie" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
-                <div>
-                  <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Pastor Nick Manzie</h3>
-                  <p className="text-primary text-sm font-semibold mb-3">Senior Pastor</p>
-                  <div className="space-y-1">
-                    <p className="text-sm text-gray-warm">
-                      <a href="mailto:nickmanzie@centralbaptistpsl.com" className="hover:text-primary transition-colors">nickmanzie@centralbaptistpsl.com</a>
-                    </p>
-                    <p className="text-sm text-gray-warm">
-                      <a href="tel:7722492463" className="hover:text-primary transition-colors">(772) 249-2463</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all">
-                  <Image src="/images/don-reid.jpg" alt="Pastor Don Reid" width={56} height={56} className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Pastor Don Reid</h3>
-                  <p className="text-primary text-sm font-semibold mb-3">Emergency Contact</p>
-                  <div className="space-y-1">
-                    <p className="text-sm text-gray-warm">
-                      <a href="mailto:donreid@centralbaptistpsl.com" className="hover:text-primary transition-colors">donreid@centralbaptistpsl.com</a>
-                    </p>
-                    <p className="text-sm text-gray-warm">
-                      <a href="tel:7728123947" className="hover:text-primary transition-colors">(772) 812-3947</a>
-                    </p>
-                  </div>
+                <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Pastor Nick Manzie</h3>
+                <span className="inline-block bg-primary/[0.08] text-primary text-xs font-semibold px-3 py-1 rounded-full mt-1 mb-4">Senior Pastor</span>
+                <div className="space-y-2 w-full">
+                  <a href="mailto:nickmanzie@centralbaptistpsl.com" className="flex items-center justify-center gap-2 text-sm text-gray-warm hover:text-primary transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    nickmanzie@centralbaptistpsl.com
+                  </a>
+                  <a href="tel:7722492463" className="flex items-center justify-center gap-2 text-sm text-gray-warm hover:text-primary transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    (772) 249-2463
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 animate-icon-float group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all mb-4">
+                  <Image src="/images/don-reid.jpg" alt="Pastor Don Reid" width={80} height={80} className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Pastor Don Reid</h3>
+                <span className="inline-block bg-primary/[0.08] text-primary text-xs font-semibold px-3 py-1 rounded-full mt-1 mb-4">Emergency Contact</span>
+                <div className="space-y-2 w-full">
+                  <a href="mailto:donreid@centralbaptistpsl.com" className="flex items-center justify-center gap-2 text-sm text-gray-warm hover:text-primary transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    donreid@centralbaptistpsl.com
+                  </a>
+                  <a href="tel:7728123947" className="flex items-center justify-center gap-2 text-sm text-gray-warm hover:text-primary transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    (772) 812-3947
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 animate-icon-float group-hover:scale-110 transition-transform duration-300 mb-4">
+                  <svg className="w-9 h-9 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <div>
-                  <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Prayer Concerns</h3>
-                  <p className="text-primary text-sm font-semibold mb-3">Irene Conley</p>
-                  <p className="text-sm text-gray-warm">
-                    <a href="tel:7728739446" className="hover:text-primary transition-colors">(772) 873-9446</a>
-                  </p>
-                </div>
+                <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Prayer Concerns</h3>
+                <span className="inline-block bg-primary/[0.08] text-primary text-xs font-semibold px-3 py-1 rounded-full mt-1 mb-4">Irene Conley</span>
+                <a href="tel:7728739446" className="flex items-center justify-center gap-2 text-sm text-gray-warm hover:text-primary transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  (772) 873-9446
+                </a>
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all">
-                  <Image src="/images/jessica-manzie.jpg" alt="Jessica Manzie" width={56} height={56} className="w-full h-full object-cover" />
+            <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-full overflow-hidden shrink-0 ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all mb-4">
+                  <Image src="/images/jessica-manzie.jpg" alt="Jessica Manzie" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
-                <div>
-                  <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Children/Youth Ministries</h3>
-                  <p className="text-primary text-sm font-semibold mb-3">Jessica Manzie</p>
-                  <p className="text-sm text-gray-warm">
-                    <a href="mailto:cbcpslstudentministry@gmail.com" className="hover:text-primary transition-colors">cbcpslstudentministry@gmail.com</a>
-                  </p>
-                </div>
+                <h3 className="font-bold font-[family-name:var(--font-playfair)] text-dark text-lg">Children/Youth Ministries</h3>
+                <span className="inline-block bg-primary/[0.08] text-primary text-xs font-semibold px-3 py-1 rounded-full mt-1 mb-4">Jessica Manzie</span>
+                <a href="mailto:cbcpslstudentministry@gmail.com" className="flex items-center justify-center gap-2 text-sm text-gray-warm hover:text-primary transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  cbcpslstudentministry@gmail.com
+                </a>
               </div>
             </div>
           </div>
