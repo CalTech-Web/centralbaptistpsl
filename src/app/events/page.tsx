@@ -7,35 +7,41 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ServiceTimesSection from "@/components/ServiceTimesSection";
 import { useState, useEffect, useCallback } from "react";
 
+// ORDER: 1) Dated events (earliest first) → 2) Recurring by day (Mon→Sun) then time (earliest first) → 3) No day/time → 4) YouTube last
 const images = [
+  // --- Dated events (earliest first) ---
+  { src: "/images/slider/food-giveaway.jpg", alt: "Food Giveaway", gradient: "from-green-600/85" },
+  { src: "/images/slider/unity-sunday.jpg", alt: "Unity Sunday", gradient: "from-blue-600/85" },
   { src: "/images/slider/easter-eggstravaganza.jpg", alt: "Easter Eggstravaganza", gradient: "from-pink-600/85" },
   { src: "/images/slider/easter-sunday.jpg", alt: "Easter Sunday", gradient: "from-purple-600/85" },
-  { src: "/images/slider/unity-sunday.jpg", alt: "Unity Sunday", gradient: "from-blue-600/85" },
   { src: "/images/slider/israel-trip.jpg", alt: "Israel Trip", gradient: "from-amber-600/85" },
-  { src: "/images/slider/food-giveaway.jpg", alt: "Food Giveaway", gradient: "from-green-600/85" },
-  { src: "/images/slider/church-bus.jpg", alt: "Church Bus Ministry", gradient: "from-teal-600/85" },
-  { src: "/images/slider/adult-bible-study.jpg", alt: "Adult Bible Study", gradient: "from-indigo-600/85" },
+  // --- Recurring: Sunday (by time, earliest first) ---
   { src: "/images/slider/god-creator.jpg", alt: "God is the Creator", gradient: "from-orange-600/85" },
   { src: "/images/slider/promises.jpg", alt: "Promises", gradient: "from-rose-600/85" },
   { src: "/images/slider/wisdom-from-god.jpg", alt: "Wisdom from God", gradient: "from-sky-600/85" },
   { src: "/images/slider/adult-sunday-school.jpg", alt: "Adult Sunday School", gradient: "from-violet-600/85" },
   { src: "/images/slider/nursery.jpg", alt: "Nursery", gradient: "from-emerald-600/85" },
   { src: "/images/slider/revelation.jpg", alt: "Revelation", gradient: "from-red-600/85" },
+  // --- Recurring: Wednesday ---
+  { src: "/images/slider/adult-bible-study.jpg", alt: "Adult Bible Study", gradient: "from-indigo-600/85" },
+  // --- No specific day/time ---
+  { src: "/images/slider/church-bus.jpg", alt: "Church Bus Ministry", gradient: "from-teal-600/85" },
+  // --- YouTube (always last) ---
   { src: "/images/slider/youtube.jpg", alt: "Watch on YouTube", gradient: "from-red-600/85" },
 ];
 
 const events = [
+  { title: "Food Giveaway", color: "bg-green-100 text-green-800", dot: "bg-green-500" },
+  { title: "Unity Sunday", color: "bg-blue-100 text-blue-800", dot: "bg-blue-500" },
   { title: "Easter Eggstravaganza", color: "bg-pink-100 text-pink-800", dot: "bg-pink-500" },
   { title: "Easter Sunday", color: "bg-purple-100 text-purple-800", dot: "bg-purple-500" },
-  { title: "Unity Sunday", color: "bg-blue-100 text-blue-800", dot: "bg-blue-500" },
   { title: "Israel Trip", color: "bg-amber-100 text-amber-800", dot: "bg-amber-500" },
-  { title: "Food Giveaway", color: "bg-green-100 text-green-800", dot: "bg-green-500" },
-  { title: "Church Bus Ministry", color: "bg-teal-100 text-teal-800", dot: "bg-teal-500" },
-  { title: "Adult Bible Study", color: "bg-indigo-100 text-indigo-800", dot: "bg-indigo-500" },
   { title: "God is the Creator", color: "bg-orange-100 text-orange-800", dot: "bg-orange-500" },
   { title: "Promises", color: "bg-rose-100 text-rose-800", dot: "bg-rose-500" },
   { title: "Wisdom from God", color: "bg-sky-100 text-sky-800", dot: "bg-sky-500" },
   { title: "Adult Sunday School", color: "bg-violet-100 text-violet-800", dot: "bg-violet-500" },
+  { title: "Adult Bible Study", color: "bg-indigo-100 text-indigo-800", dot: "bg-indigo-500" },
+  { title: "Church Bus Ministry", color: "bg-teal-100 text-teal-800", dot: "bg-teal-500" },
 ];
 
 export default function EventsPage() {
