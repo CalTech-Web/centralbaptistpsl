@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Contact - Central Baptist Church",
+  title: "Contact",
   description:
     "Contact Central Baptist Church of Port St. Lucie - 202 SW Tulip Blvd, Port St. Lucie, FL 34953. Phone: (772) 237-4907.",
 };

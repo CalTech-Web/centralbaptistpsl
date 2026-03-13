@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Our Story - Central Baptist Church",
+  title: "Our Story",
   description:
     "Learn about the history of Central Baptist Church of Port St. Lucie, from our humble beginnings in 1978 to today.",
 };

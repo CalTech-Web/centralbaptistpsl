@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
-  title: "Bible Reading Plans - Central Baptist Church",
+  title: "Bible Reading Plans",
   description:
     "365-day Bible reading plans from Central Baptist Church - Cover to Cover, Chronological, and Old & New Testament daily plans.",
 };

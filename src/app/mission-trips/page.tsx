@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
-  title: "Mission Trips - Central Baptist Church",
+  title: "Mission Trips",
   description:
     "Central Baptist Church has completed mission trips to 17 locations since 2001, serving communities across the Southeast United States.",
 };
