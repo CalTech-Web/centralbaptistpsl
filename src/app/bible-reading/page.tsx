@@ -99,29 +99,29 @@ export default function BibleReading() {
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-light rounded-xl p-6 border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
-                <svg className="w-10 h-10 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+              <div className="group bg-light rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:border-primary/15 hover:-translate-y-1 transition-all duration-300">
+                <svg className="w-7 h-7 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
                 <span className="text-sm font-bold text-dark">3 Reading Plans</span>
                 <span className="text-xs text-gray-warm mt-1">Choose your pace</span>
               </div>
-              <div className="bg-light rounded-xl p-6 border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
-                <svg className="w-10 h-10 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+              <div className="group bg-light rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:border-primary/15 hover:-translate-y-1 transition-all duration-300">
+                <svg className="w-7 h-7 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <span className="text-sm font-bold text-dark">365 Days</span>
                 <span className="text-xs text-gray-warm mt-1">Daily readings</span>
               </div>
-              <div className="bg-light rounded-xl p-6 border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
-                <svg className="w-10 h-10 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+              <div className="group bg-light rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:border-primary/15 hover:-translate-y-1 transition-all duration-300">
+                <svg className="w-7 h-7 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                 </svg>
                 <span className="text-sm font-bold text-dark">Old &amp; New Testament</span>
                 <span className="text-xs text-gray-warm mt-1">Cover to cover</span>
               </div>
-              <div className="bg-light rounded-xl p-6 border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300">
-                <svg className="w-10 h-10 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+              <div className="group bg-light rounded-2xl p-6 border border-gray-100 flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:border-primary/15 hover:-translate-y-1 transition-all duration-300">
+                <svg className="w-7 h-7 text-primary mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
                 <span className="text-sm font-bold text-dark">Read Together</span>
@@ -195,11 +195,11 @@ export default function BibleReading() {
             {plans.map((plan) => (
               <div
                 key={plan.title}
-                className="group bg-white/10 rounded-2xl overflow-hidden border border-white/20 hover:bg-white/20 hover:border-white/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300"
+                className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300"
               >
                 <div className="p-8 text-center">
-                  <div className="w-16 h-16 bg-white/15 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:bg-white/25 transition-all duration-300">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={plan.icon} />
                     </svg>
                   </div>
@@ -243,8 +243,8 @@ export default function BibleReading() {
                 <span className="inline-block text-primary/20 text-5xl font-bold font-[family-name:var(--font-playfair)] mb-3">
                   {step.number}
                 </span>
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={step.icon} />
                   </svg>
                 </div>
@@ -284,7 +284,7 @@ export default function BibleReading() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

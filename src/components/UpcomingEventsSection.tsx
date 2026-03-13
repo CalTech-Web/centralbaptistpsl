@@ -80,7 +80,7 @@ export default function UpcomingEventsSection() {
           {previewImages.map((img) => (
             <div
               key={img.src}
-              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.15)] group"
+              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group"
             >
               <Image
                 src={img.src}
@@ -101,7 +101,7 @@ export default function UpcomingEventsSection() {
         <div className="text-center">
           <Link
             href="/events"
-            className="inline-block bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-light transition-colors duration-200 btn-interact"
+            className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-light transition-colors duration-200 btn-interact"
           >
             View All Events
           </Link>

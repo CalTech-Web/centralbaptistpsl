@@ -150,10 +150,10 @@ export default function OurMinistries() {
             {childrenYouth.map((m) => (
               <div
                 key={m.title}
-                className="group bg-white/10 rounded-2xl p-7 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10"
+                className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 hover:bg-white/[0.16] transition-all duration-300 border border-white/20 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10"
               >
                 <div className="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mb-5 group-hover:bg-white/25 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={m.icon} />
                   </svg>
                 </div>
@@ -199,8 +199,8 @@ export default function OurMinistries() {
                 className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-primary/15 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary-light transition-colors duration-300">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={m.icon} />
                     </svg>
                   </div>
@@ -243,10 +243,10 @@ export default function OurMinistries() {
             {worshipOutreach.map((m) => (
               <div
                 key={m.title}
-                className="group bg-white/10 rounded-2xl p-7 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10"
+                className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 hover:bg-white/[0.16] transition-all duration-300 border border-white/20 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10"
               >
                 <div className="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mb-5 group-hover:bg-white/25 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={m.icon} />
                   </svg>
                 </div>

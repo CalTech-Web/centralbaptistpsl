@@ -54,7 +54,7 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
         {/* 3-column layout: Sunday | Location | Wednesday */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {/* Sunday Card */}
-          <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
+          <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
             <div className="bg-gradient-to-r from-primary to-primary-dark px-6 py-5 text-center">
               <div className="flex items-center justify-center gap-3">
                 <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
                       <span className="font-semibold text-dark block">{s.name}</span>
                       <span className="text-sm text-gray-warm">{s.detail}</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">
                       {s.time}
                     </span>
                   </div>
@@ -100,8 +100,8 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
 
             {/* Address Card */}
             <div className={`rounded-2xl p-6 text-center ${isGreen ? "bg-white/10 backdrop-blur-sm border border-white/20" : "bg-white border border-gray-100 shadow-sm"}`}>
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${isGreen ? "bg-white/15" : "bg-primary/10"}`}>
-                <svg className={`w-6 h-6 ${isGreen ? "text-white" : "text-primary"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-3 ${isGreen ? "bg-white/15" : "bg-primary/10"}`}>
+                <svg className={`w-7 h-7 ${isGreen ? "text-white" : "text-primary"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -127,8 +127,8 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
 
             {/* Contact Info */}
             <div className={`rounded-2xl p-6 text-center ${isGreen ? "bg-white/10 backdrop-blur-sm border border-white/20" : "bg-white border border-gray-100 shadow-sm"}`}>
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${isGreen ? "bg-white/15" : "bg-primary/10"}`}>
-                <svg className={`w-6 h-6 ${isGreen ? "text-white" : "text-primary"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-3 ${isGreen ? "bg-white/15" : "bg-primary/10"}`}>
+                <svg className={`w-7 h-7 ${isGreen ? "text-white" : "text-primary"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </div>
@@ -148,7 +148,7 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
           </div>
 
           {/* Wednesday Card */}
-          <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-1">
+          <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1">
             <div className="bg-gradient-to-r from-primary to-primary-dark px-6 py-5 text-center">
               <div className="flex items-center justify-center gap-3">
                 <svg className="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,7 +170,7 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
                       <span className="font-semibold text-dark block">{s.name}</span>
                       <span className="text-sm text-gray-warm">{s.detail}</span>
                     </div>
-                    <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-sm shrink-0">
+                    <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-sm shrink-0">
                       {s.time}
                     </span>
                   </div>
@@ -184,7 +184,7 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
         <div className="mt-14 flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded font-bold text-lg transition-colors duration-200 ${
+            className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200 ${
               isGreen
                 ? "bg-white text-primary hover:bg-light"
                 : "bg-primary text-white hover:bg-primary-dark"
@@ -197,7 +197,7 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
           </Link>
           <a
             href="tel:7722374907"
-            className={`inline-flex items-center justify-center gap-2 border-2 px-8 py-4 rounded font-bold text-lg transition-colors duration-200 ${
+            className={`inline-flex items-center justify-center gap-2 border-2 px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200 ${
               isGreen
                 ? "border-white text-white hover:bg-white hover:text-primary"
                 : "border-primary text-primary hover:bg-primary hover:text-white"

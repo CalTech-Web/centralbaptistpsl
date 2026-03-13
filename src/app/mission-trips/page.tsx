@@ -61,32 +61,40 @@ export default function MissionTrips() {
 
             {/* Right - Feature Cards */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
-                <svg className="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center mb-3 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
                 <span className="text-sm font-bold">6 States</span>
                 <span className="text-xs text-white/70 mt-1">Across the Southeast</span>
               </div>
-              <div className="bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
-                <svg className="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+              <div className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center mb-3 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
                 <span className="text-sm font-bold">17 Locations</span>
                 <span className="text-xs text-white/70 mt-1">Communities served</span>
               </div>
-              <div className="bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
-                <svg className="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+              <div className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center mb-3 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
                 <span className="text-sm font-bold">20+ Years</span>
                 <span className="text-xs text-white/70 mt-1">Of faithful service</span>
               </div>
-              <div className="bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
-                <svg className="w-10 h-10 text-white mb-3" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+              <div className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center text-center hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300">
+                <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center mb-3 group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
                 <span className="text-sm font-bold">Lives Changed</span>
                 <span className="text-xs text-white/70 mt-1">Through Christ&apos;s love</span>
               </div>
@@ -176,8 +184,8 @@ export default function MissionTrips() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/15 hover:-translate-y-1"
               >
                 <div className="flex items-center gap-4 p-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-md">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -186,7 +194,7 @@ export default function MissionTrips() {
                     <h3 className="font-bold text-dark text-lg">{trip.location}</h3>
                     <p className="text-sm text-gray-warm">{trip.trips}</p>
                   </div>
-                  <span className="text-primary font-bold bg-primary/5 px-3 py-1 rounded-full text-xs shrink-0">
+                  <span className="text-primary font-bold bg-primary/[0.08] px-3 py-1 rounded-full text-xs shrink-0">
                     {trip.state}
                   </span>
                 </div>
@@ -214,9 +222,9 @@ export default function MissionTrips() {
               { title: "Prayer & Worship", desc: "Lifting up the communities we serve through prayer and worship gatherings.", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
               { title: "Fellowship", desc: "Building bonds between our members while serving others together.", icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" },
             ].map((item) => (
-              <div key={item.title} className="group bg-white/10 rounded-2xl p-7 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10">
+              <div key={item.title} className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 hover:bg-white/[0.16] transition-all duration-300 border border-white/20 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10">
                 <div className="w-14 h-14 bg-white/15 rounded-xl flex items-center justify-center mb-5 group-hover:bg-white/25 transition-all duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                   </svg>
                 </div>
@@ -253,7 +261,7 @@ export default function MissionTrips() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all duration-200 btn-interact"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

@@ -113,7 +113,7 @@ export default function GalleryPage() {
             {galleryImages.map((image, index) => (
               <div
                 key={image.src}
-                className="break-inside-avoid group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="break-inside-avoid group cursor-pointer rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 onClick={() => setLightboxIndex(index)}
               >
                 <div className="relative">
