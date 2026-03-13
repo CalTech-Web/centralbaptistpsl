@@ -138,7 +138,7 @@ export default function BibleReading() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 animate-ken-burns">
           <Image
-            src="/images/prayer-request.jpg"
+            src="/images/lamp-to-your-feet.jpg"
             alt="Bible"
             fill
             className="object-cover"
