@@ -50,7 +50,7 @@ export default function HeroSection() {
             {[...Array(8)].map((_, i) => (
               <div key={i} className="flex items-center shrink-0">
                 {[
-                  { label: "Watch", href: "https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ" },
+                  { label: "Watch", href: "https://www.youtube.com/@CBCPSL/streams" },
                   { label: "Give", href: "https://tithe.ly/give?c=1379702" },
                   { label: "Prayer", href: "https://forms.gle/QRk1FSUSFnjAVumv7" },
                   { label: "Events", href: "/events", internal: true },

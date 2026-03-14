@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ"
+                href="https://www.youtube.com/@CBCPSL/streams"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"

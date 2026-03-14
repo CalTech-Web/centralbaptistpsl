@@ -122,7 +122,7 @@ export default async function LatestSermon() {
               own life.
             </p>
             <a
-              href={`https://www.youtube.com/channel/${CHANNEL_ID}`}
+              href="https://www.youtube.com/@CBCPSL/streams"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded font-bold hover:bg-light transition-colors duration-200 btn-interact"

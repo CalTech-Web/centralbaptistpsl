@@ -94,7 +94,7 @@ const jsonLd = {
     longitude: -80.3585,
   },
   sameAs: [
-    "https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ",
+    "https://www.youtube.com/@CBCPSL/streams",
     "https://www.instagram.com/centralbaptistofpsl/",
     "https://x.com/CentralPSL",
     "https://www.facebook.com/centralbaptistchurchpsl",
