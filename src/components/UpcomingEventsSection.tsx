@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { events, downloadICS } from "@/lib/calendar";
 
 // ORDER: 1) Dated events (earliest first) → 2) Recurring by day (Mon→Sun) then time (earliest first) → 3) No day/time → 4) YouTube last
 const images = [
@@ -73,45 +72,6 @@ export default function UpcomingEventsSection() {
               and fellowship to Bible study and worship, there&apos;s always something
               meaningful happening at Central Baptist Church.
             </p>
-          </div>
-
-          {/* Event Tags */}
-          <div className="flex flex-wrap justify-center gap-2.5 mb-10">
-            {events.map((event) =>
-              event.href ? (
-                <a
-                  key={event.title}
-                  href={event.href}
-                  className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
-                  title={event.title}
-                >
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
-                    <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
-                  </span>
-                  {event.title}
-                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </a>
-              ) : (
-                <button
-                  key={event.title}
-                  onClick={() => downloadICS(event)}
-                  className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
-                  title={`Add "${event.title}" to your calendar`}
-                >
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
-                    <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
-                  </span>
-                  {event.title}
-                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </button>
-              )
-            )}
           </div>
 
           {/* Image Grid - 3 columns, 2 rows */}
