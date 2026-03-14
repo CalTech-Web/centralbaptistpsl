@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { events, downloadICS } from "@/lib/calendar";
 
 // ORDER: 1) Dated events (earliest first) → 2) Recurring by day (Mon→Sun) then time (earliest first) → 3) No day/time → 4) YouTube last
@@ -30,96 +31,187 @@ const images = [
 const previewImages = images.slice(0, 6);
 
 export default function UpcomingEventsSection() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (lightboxIndex !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [lightboxIndex]);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxIndex(null);
+      if (e.key === "ArrowRight") setLightboxIndex((i) => (i !== null ? (i + 1) % previewImages.length : null));
+      if (e.key === "ArrowLeft") setLightboxIndex((i) => (i !== null ? (i - 1 + previewImages.length) % previewImages.length : null));
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [lightboxIndex]);
+
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-2">
-            Upcoming Events
-          </h2>
-          <p className="text-lg text-primary font-semibold mb-3">
-            What&apos;s Happening at Central Baptist
-          </p>
-          <div className="section-divider mb-4" />
-          <p className="text-gray-warm leading-relaxed max-w-2xl mx-auto">
-            Join us for exciting events throughout the year! From community outreach
-            and fellowship to Bible study and worship, there&apos;s always something
-            meaningful happening at Central Baptist Church.
-          </p>
-        </div>
+    <>
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-2">
+              Upcoming Events
+            </h2>
+            <p className="text-lg text-primary font-semibold mb-3">
+              What&apos;s Happening at Central Baptist
+            </p>
+            <div className="section-divider mb-4" />
+            <p className="text-gray-warm leading-relaxed max-w-2xl mx-auto">
+              Join us for exciting events throughout the year! From community outreach
+              and fellowship to Bible study and worship, there&apos;s always something
+              meaningful happening at Central Baptist Church.
+            </p>
+          </div>
 
-        {/* Event Tags */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-10">
-          {events.map((event) =>
-            event.href ? (
-              <a
-                key={event.title}
-                href={event.href}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
-                title={event.title}
-              >
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
-                  <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
-                </span>
-                {event.title}
-                <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </a>
-            ) : (
+          {/* Event Tags */}
+          <div className="flex flex-wrap justify-center gap-2.5 mb-10">
+            {events.map((event) =>
+              event.href ? (
+                <a
+                  key={event.title}
+                  href={event.href}
+                  className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
+                  title={event.title}
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
+                    <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
+                  </span>
+                  {event.title}
+                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </a>
+              ) : (
+                <button
+                  key={event.title}
+                  onClick={() => downloadICS(event)}
+                  className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
+                  title={`Add "${event.title}" to your calendar`}
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
+                    <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
+                  </span>
+                  {event.title}
+                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              )
+            )}
+          </div>
+
+          {/* Image Grid - 3 columns, 2 rows */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10">
+            {previewImages.map((img, index) => (
               <button
-                key={event.title}
-                onClick={() => downloadICS(event)}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
-                title={`Add "${event.title}" to your calendar`}
+                key={img.src}
+                onClick={() => setLightboxIndex(index)}
+                className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group bg-gray-100 cursor-pointer"
               >
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
-                  <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
-                </span>
-                {event.title}
-                <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 400px"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${img.gradient} to-transparent p-3`}>
+                  <p className="text-white text-sm font-semibold">{img.alt}</p>
+                </div>
               </button>
-            )
-          )}
-        </div>
+            ))}
+          </div>
 
-        {/* Image Grid - 3 columns, 2 rows */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10">
-          {previewImages.map((img) => (
-            <div
-              key={img.src}
-              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm group bg-gray-100"
+          {/* CTA */}
+          <div className="text-center">
+            <Link
+              href="/events"
+              className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-light transition-colors duration-200 btn-interact"
             >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-contain group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 50vw, 400px"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-              <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t ${img.gradient} to-transparent p-3`}>
-                <p className="text-white text-sm font-semibold">{img.alt}</p>
-              </div>
-            </div>
-          ))}
+              View All Events
+            </Link>
+          </div>
         </div>
+      </section>
 
-        {/* CTA */}
-        <div className="text-center">
-          <Link
-            href="/events"
-            className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-light transition-colors duration-200 btn-interact"
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightboxIndex(null)}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="Close lightbox"
           >
-            View All Events
-          </Link>
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Prev button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((lightboxIndex - 1 + previewImages.length) % previewImages.length);
+            }}
+            className="absolute left-4 md:left-8 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="Previous image"
+          >
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Next button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((lightboxIndex + 1) % previewImages.length);
+            }}
+            className="absolute right-4 md:right-8 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="Next image"
+          >
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Image */}
+          <div
+            className="relative w-full max-w-4xl max-h-[85vh] aspect-video"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={previewImages[lightboxIndex].src}
+              alt={previewImages[lightboxIndex].alt}
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+            <p className="absolute bottom-0 left-0 right-0 text-center text-white font-semibold text-lg py-3 bg-black/40">
+              {previewImages[lightboxIndex].alt}
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 }
