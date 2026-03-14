@@ -100,8 +100,8 @@ export default function EasterSection() {
             {/* Purple spotlight */}
             <div className="absolute top-1/2 left-1/2 -translate-x-[30%] -translate-y-[60%] w-[280px] h-[280px] md:w-[360px] md:h-[360px] bg-[#d4b4f5]/35 rounded-full blur-[80px] pointer-events-none" />
 
-            {/* HE IS RISEN text */}
-            <div className="relative select-none text-center">
+            {/* HE IS RISEN + arc — shining animation on the whole group */}
+            <div className="relative select-none text-center easter-shine">
               <h3
                 className="text-7xl md:text-8xl lg:text-9xl font-bold font-[family-name:var(--font-playfair)] leading-[0.9] tracking-tight easter-gradient-text"
                 aria-label="He is Risen"
@@ -112,7 +112,7 @@ export default function EasterSection() {
               </h3>
 
               {/* EASTER SUNDAY SERVICE arc — small, tight arc at upper-right of "IS" */}
-              <div className="absolute -top-[10px] right-[5px] md:-top-[14px] md:right-[0px] w-[140px] h-[180px] md:w-[160px] md:h-[200px] hazard-flash pointer-events-none">
+              <div className="absolute -top-[10px] right-[5px] md:-top-[14px] md:right-[0px] w-[140px] h-[180px] md:w-[160px] md:h-[200px] pointer-events-none">
                 <svg
                   viewBox="0 0 140 180"
                   className="w-full h-full overflow-visible"

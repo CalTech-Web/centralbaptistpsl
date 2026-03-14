@@ -282,14 +282,34 @@ html {
   background-clip: text;
 }
 
-/* Hazard light flash for arc text */
-@keyframes hazardFlash {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+/* Shining shimmer across HE IS RISEN + arc */
+.easter-shine {
+  position: relative;
+  overflow: visible;
 }
 
-.hazard-flash {
-  animation: hazardFlash 1s step-end infinite;
+.easter-shine::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -60%;
+  width: 50%;
+  height: 140%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.5) 45%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.5) 55%,
+    transparent 80%
+  );
+  animation: easterShine 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes easterShine {
+  0% { left: -60%; }
+  40%, 100% { left: 120%; }
 }
 
 /* ===== END EASTER SEASON ===== */
