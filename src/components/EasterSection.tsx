@@ -31,29 +31,29 @@ export default function EasterSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* LEFT — Content */}
           <div>
-            <span className="inline-block text-[#7B6BF5] text-sm font-semibold uppercase tracking-widest mb-3">
+            <span className="inline-block text-[#7B6BF5] text-sm font-semibold uppercase tracking-widest mb-4">
               April 5, 2026
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-3">
               Celebrate Easter With Us
             </h2>
-            <p className="text-lg text-[#9B6BF5] font-semibold mb-3">
+            <p className="text-lg text-[#9B6BF5] font-semibold mb-4">
               Rejoice in the Risen King
             </p>
-            <div className="section-divider !mx-0 mb-6" />
+            <div className="section-divider !mx-0 mb-8" />
 
-            <blockquote className="border-l-4 border-[#C855D4] pl-5 mb-8">
+            <blockquote className="border-l-4 border-[#C855D4] pl-6 ml-1 mb-10">
               <p className="text-gray-warm italic text-lg leading-relaxed font-[family-name:var(--font-playfair)]">
                 &ldquo;He is not here; he has risen, just as he said. Come and
                 see the place where he lay.&rdquo;
               </p>
-              <cite className="text-[#9B6BF5] text-sm not-italic font-bold block mt-2">
+              <cite className="text-[#9B6BF5] text-sm not-italic font-bold block mt-3">
                 — Matthew 28:6
               </cite>
             </blockquote>
 
             {/* Activity Pills */}
-            <p className="text-sm text-gray-warm font-semibold uppercase tracking-wider mb-4">
+            <p className="text-sm text-gray-warm font-semibold uppercase tracking-wider mb-5">
               Easter Sunday Schedule
             </p>
             <div className="flex flex-wrap gap-3">
@@ -95,8 +95,13 @@ export default function EasterSection() {
 
           {/* RIGHT — Visual */}
           <div className="relative flex items-center justify-center min-h-[340px] md:min-h-[420px]">
+            {/* Yellow spotlight */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[40%] w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-[#f5e6a0]/40 rounded-full blur-[80px] pointer-events-none" />
+            {/* Purple spotlight */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-[30%] -translate-y-[60%] w-[280px] h-[280px] md:w-[360px] md:h-[360px] bg-[#d4b4f5]/35 rounded-full blur-[80px] pointer-events-none" />
+
             {/* HE IS RISEN text */}
-            <div className="relative select-none">
+            <div className="relative select-none text-center">
               <h3
                 className="text-7xl md:text-8xl lg:text-9xl font-bold font-[family-name:var(--font-playfair)] leading-[0.9] tracking-tight easter-gradient-text"
                 aria-label="He is Risen"
@@ -106,8 +111,8 @@ export default function EasterSection() {
                 RISEN
               </h3>
 
-              {/* EASTER SUNDAY SERVICE arc */}
-              <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-[180px] h-[180px] md:w-[220px] md:h-[220px] hazard-flash">
+              {/* EASTER SUNDAY SERVICE arc — positioned right */}
+              <div className="absolute top-1/2 -translate-y-1/2 -right-[90px] md:-right-[110px] w-[180px] h-[180px] md:w-[220px] md:h-[220px] hazard-flash">
                 <svg
                   viewBox="0 0 200 200"
                   className="w-full h-full"
@@ -122,11 +127,11 @@ export default function EasterSection() {
                   </defs>
                   <text
                     className="fill-[#7B6BF5]"
-                    fontSize="15"
+                    fontSize="14.5"
                     fontWeight="700"
-                    letterSpacing="4"
+                    letterSpacing="3"
                   >
-                    <textPath href="#easterArc" startOffset="58%">
+                    <textPath href="#easterArc" startOffset="0%">
                       EASTER SUNDAY SERVICE
                     </textPath>
                   </text>
