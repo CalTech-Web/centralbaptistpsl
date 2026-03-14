@@ -274,42 +274,36 @@ html {
 
 /* ===== EASTER SEASON (remove after April 12, 2026) ===== */
 
-/* "HE IS RISEN" purple-to-pink gradient text */
+/* "HE IS RISEN" purple-to-pink gradient text with shine through letters */
 .easter-gradient-text {
-  background: linear-gradient(180deg, #7B7BF5 0%, #9B6BF5 35%, #C855D4 60%, #E84BA5 100%);
+  background: linear-gradient(
+    105deg,
+    #7B7BF5 0%, #9B6BF5 15%, #C855D4 30%, #E84BA5 45%,
+    #ffffff 49%, #ffffff 51%,
+    #7B7BF5 55%, #9B6BF5 65%, #C855D4 80%, #E84BA5 100%
+  );
+  background-size: 250% 100%;
+  background-position: 100% 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: textShine 4s ease-in-out infinite;
 }
 
-/* Shining shimmer across HE IS RISEN + arc */
-.easter-shine {
-  position: relative;
-  overflow: visible;
+@keyframes textShine {
+  0% { background-position: 100% 0; }
+  40%, 100% { background-position: -50% 0; }
 }
 
-.easter-shine::after {
-  content: "";
-  position: absolute;
-  top: -20%;
-  left: -60%;
-  width: 50%;
-  height: 140%;
-  background: linear-gradient(
-    105deg,
-    transparent 20%,
-    rgba(255, 255, 255, 0.5) 45%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0.5) 55%,
-    transparent 80%
-  );
-  animation: easterShine 4s ease-in-out infinite;
-  pointer-events: none;
+/* Shine on SVG arc text */
+.easter-arc-shine {
+  animation: arcShine 4s ease-in-out infinite;
 }
 
-@keyframes easterShine {
-  0% { left: -60%; }
-  40%, 100% { left: 120%; }
+@keyframes arcShine {
+  0%, 30% { filter: brightness(1); }
+  35% { filter: brightness(1.8); }
+  40%, 100% { filter: brightness(1); }
 }
 
 /* ===== END EASTER SEASON ===== */

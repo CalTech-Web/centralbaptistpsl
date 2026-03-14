@@ -95,13 +95,13 @@ export default function EasterSection() {
 
           {/* RIGHT — Visual */}
           <div className="relative flex items-center justify-center min-h-[340px] md:min-h-[420px]">
-            {/* Yellow spotlight */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-[60%] -translate-y-[40%] w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-[#f5e6a0]/40 rounded-full blur-[80px] pointer-events-none" />
-            {/* Purple spotlight */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-[30%] -translate-y-[60%] w-[280px] h-[280px] md:w-[360px] md:h-[360px] bg-[#d4b4f5]/35 rounded-full blur-[80px] pointer-events-none" />
+            {/* Purple spotlight — left side */}
+            <div className="absolute top-1/2 left-[20%] -translate-y-1/2 w-[300px] h-[350px] md:w-[400px] md:h-[450px] bg-[#d4b4f5]/30 rounded-full blur-[100px] pointer-events-none" />
+            {/* Yellow/green spotlight — right side */}
+            <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[300px] h-[350px] md:w-[400px] md:h-[450px] bg-[#e8e4a0]/35 rounded-full blur-[100px] pointer-events-none" />
 
-            {/* HE IS RISEN + arc — shining animation on the whole group */}
-            <div className="relative select-none text-center easter-shine">
+            {/* HE IS RISEN + arc */}
+            <div className="relative select-none text-center">
               <h3
                 className="text-7xl md:text-8xl lg:text-9xl font-bold font-[family-name:var(--font-playfair)] leading-[0.9] tracking-tight easter-gradient-text"
                 aria-label="He is Risen"
@@ -111,8 +111,8 @@ export default function EasterSection() {
                 RISEN
               </h3>
 
-              {/* EASTER SUNDAY SERVICE arc — small, tight arc at upper-right of "IS" */}
-              <div className="absolute -top-[10px] right-[5px] md:-top-[14px] md:right-[0px] w-[140px] h-[180px] md:w-[160px] md:h-[200px] pointer-events-none">
+              {/* EASTER SUNDAY SERVICE arc — upper-right of "IS" */}
+              <div className="absolute -top-[10px] right-[5px] md:-top-[14px] md:right-[0px] w-[140px] h-[180px] md:w-[160px] md:h-[200px] pointer-events-none easter-arc-shine">
                 <svg
                   viewBox="0 0 140 180"
                   className="w-full h-full overflow-visible"
