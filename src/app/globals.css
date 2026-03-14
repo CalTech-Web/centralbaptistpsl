@@ -272,6 +272,16 @@ html {
   animation: iconFloat 1.5s ease-in-out infinite;
 }
 
+/* ===== SERMON PLAY BUTTON FLASH ===== */
+@keyframes sermonPlayFlash {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+  50% { box-shadow: 0 0 18px 6px rgba(255, 255, 255, 0.3); }
+}
+
+.sermon-play-flash {
+  animation: sermonPlayFlash 2s ease-in-out infinite;
+}
+
 /* ===== EASTER SEASON (remove after April 12, 2026) ===== */
 
 /* "HE IS RISEN" purple-to-pink gradient text with shine through letters */
