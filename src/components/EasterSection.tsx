@@ -111,25 +111,25 @@ export default function EasterSection() {
                 RISEN
               </h3>
 
-              {/* EASTER SUNDAY SERVICE arc — right side, matching image placement */}
-              <div className="absolute -top-[20px] -right-[60px] md:-top-[30px] md:-right-[70px] w-[220px] h-[280px] md:w-[260px] md:h-[320px] hazard-flash pointer-events-none">
+              {/* EASTER SUNDAY SERVICE arc — small, tight arc at upper-right of "IS" */}
+              <div className="absolute -top-[10px] right-[5px] md:-top-[14px] md:right-[0px] w-[140px] h-[180px] md:w-[160px] md:h-[200px] hazard-flash pointer-events-none">
                 <svg
-                  viewBox="0 0 200 260"
+                  viewBox="0 0 140 180"
                   className="w-full h-full overflow-visible"
                   aria-label="Easter Sunday Service"
                 >
                   <defs>
                     <path
                       id="easterArc"
-                      d="M 60,30 A 100,100 0 0,1 60,230"
+                      d="M 45,20 A 65,65 0 0,1 45,160"
                       fill="none"
                     />
                   </defs>
                   <text
                     className="fill-[#7B6BF5]"
-                    fontSize="16"
-                    fontWeight="600"
-                    letterSpacing="5"
+                    fontSize="10.5"
+                    fontWeight="500"
+                    letterSpacing="3.5"
                     fontFamily="serif"
                   >
                     <textPath href="#easterArc" startOffset="0">
