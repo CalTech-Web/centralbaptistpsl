@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Our Ministries",
   description:
-    "Explore the ministries at Central Baptist Church of Port St. Lucie - Children's, Youth, Sunday School, Music, and more.",
+    "Explore the ministries at Central Baptist Church of Port Saint Lucie - Children's, Youth, Sunday School, Music, and more.",
 };
 
 const childrenYouth = [

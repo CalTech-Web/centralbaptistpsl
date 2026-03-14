@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 import ServiceTimesSection from "@/components/ServiceTimesSection";
 import { useState, useEffect, useCallback } from "react";
+import { events, downloadICS } from "@/lib/calendar";
 
 // ORDER: 1) Dated events (earliest first) → 2) Recurring by day (Mon→Sun) then time (earliest first) → 3) No day/time → 4) YouTube last
 const images = [
@@ -28,20 +29,6 @@ const images = [
   { src: "/images/slider/church-bus.jpg", alt: "Church Bus Ministry", gradient: "from-teal-600/85" },
   // --- YouTube (always last) ---
   { src: "/images/slider/youtube.jpg", alt: "Watch on YouTube", gradient: "from-red-600/85" },
-];
-
-const events = [
-  { title: "Food Giveaway", color: "bg-green-100 text-green-800", dot: "bg-green-500" },
-  { title: "Unity Sunday", color: "bg-blue-100 text-blue-800", dot: "bg-blue-500" },
-  { title: "Easter Eggstravaganza", color: "bg-pink-100 text-pink-800", dot: "bg-pink-500" },
-  { title: "Easter Sunday", color: "bg-purple-100 text-purple-800", dot: "bg-purple-500" },
-  { title: "Israel Trip", color: "bg-amber-100 text-amber-800", dot: "bg-amber-500" },
-  { title: "God is the Creator", color: "bg-orange-100 text-orange-800", dot: "bg-orange-500" },
-  { title: "Promises", color: "bg-rose-100 text-rose-800", dot: "bg-rose-500" },
-  { title: "Wisdom from God", color: "bg-sky-100 text-sky-800", dot: "bg-sky-500" },
-  { title: "Adult Sunday School", color: "bg-violet-100 text-violet-800", dot: "bg-violet-500" },
-  { title: "Adult Bible Study", color: "bg-indigo-100 text-indigo-800", dot: "bg-indigo-500" },
-  { title: "Church Bus Ministry", color: "bg-teal-100 text-teal-800", dot: "bg-teal-500" },
 ];
 
 export default function EventsPage() {
@@ -103,27 +90,75 @@ export default function EventsPage() {
 
           {/* Event Tags */}
           <div className="flex flex-wrap justify-center gap-2.5 mb-12">
-            {events.map((event) => (
-              <div
-                key={event.title}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm`}
-              >
-                <span className="relative flex h-2.5 w-2.5">
-                  <span
-                    className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`}
-                  />
-                  <span
-                    className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`}
-                  />
-                </span>
-                {event.title}
-              </div>
-            ))}
+            {events.map((event) =>
+              event.href ? (
+                <a
+                  key={event.title}
+                  href={event.href}
+                  className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
+                  title={event.title}
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
+                    <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
+                  </span>
+                  {event.title}
+                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </a>
+              ) : (
+                <button
+                  key={event.title}
+                  onClick={() => downloadICS(event)}
+                  className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-full ${event.color} font-semibold text-sm shadow-sm cursor-pointer hover:shadow-md hover:scale-105 transition-all duration-200`}
+                  title={`Add "${event.title}" to your calendar`}
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className={`animate-pulse-dot absolute inline-flex h-full w-full rounded-full ${event.dot} opacity-75`} />
+                    <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${event.dot}`} />
+                  </span>
+                  {event.title}
+                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              )
+            )}
           </div>
 
           {/* Image Gallery */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-            {images.map((img, i) => (
+            {images.map((img, i) =>
+              img.alt === "Watch on YouTube" ? (
+              <a
+                key={img.src}
+                href="https://www.youtube.com/@CBCPSL/streams"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.15)] cursor-pointer group"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                  <svg
+                    className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z" />
+                  </svg>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                  <p className="text-white text-sm font-semibold">{img.alt}</p>
+                </div>
+              </a>
+              ) : (
               <div
                 key={img.src}
                 className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm cursor-pointer group bg-gray-100"
@@ -155,7 +190,8 @@ export default function EventsPage() {
                   <p className="text-white text-sm font-semibold">{img.alt}</p>
                 </div>
               </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </section>

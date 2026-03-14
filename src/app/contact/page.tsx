@@ -6,7 +6,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Contact",
   description:
-    "Contact Central Baptist Church of Port St. Lucie - 202 SW Tulip Blvd, Port St. Lucie, FL 34953. Phone: (772) 237-4907.",
+    "Contact Central Baptist Church of Port Saint Lucie - 202 SW Tulip Blvd, Port Saint Lucie, FL 34953. Phone: (772) 237-4907.",
 };
 
 export default function Contact() {
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-7 max-w-4xl mx-auto">
-            <a href="https://maps.google.com/?q=202+SW+Tulip+Blvd,+Port+St.+Lucie,+FL+34953" target="_blank" rel="noopener noreferrer" className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 text-center">
+            <a href="https://maps.app.goo.gl/WUNtnP58udZRLRLx7" target="_blank" rel="noopener noreferrer" className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 text-center">
               <div className="w-14 h-14 rounded-xl bg-white/15 flex items-center justify-center mx-auto mb-5 animate-icon-float group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -40,7 +40,7 @@ export default function Contact() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold font-[family-name:var(--font-playfair)] mb-2">Address</h3>
-              <p className="text-white/75 text-sm leading-relaxed">202 SW Tulip Blvd<br />Port St. Lucie, FL 34953</p>
+              <p className="text-white/75 text-sm leading-relaxed">202 SW Tulip Blvd<br />Port Saint Lucie, FL 34953</p>
             </a>
 
             <a href="tel:7722374907" className="group bg-white/[0.08] backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/[0.16] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 text-center">
@@ -160,7 +160,7 @@ export default function Contact() {
               <div className="section-divider !mx-0 mb-8" />
               <div className="rounded-2xl overflow-hidden shadow-md mb-8 border border-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3527.8!2d-80.3585!3d27.2678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d93b6c4a3e7c5d%3A0x1234567890abcdef!2s202+SW+Tulip+Blvd%2C+Port+St.+Lucie%2C+FL+34953!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1548.0!2d-80.3676349!3d27.2574013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88deea29ed2b9cb9%3A0x9f08e507fe368b04!2sCentral+Baptist+Church+of+Port+St+Lucie!5e0!3m2!1sen!2sus!4v1700000000000"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}

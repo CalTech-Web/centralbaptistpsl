@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Our Story",
   description:
-    "Learn about the history of Central Baptist Church of Port St. Lucie, from our humble beginnings in 1978 to today.",
+    "Learn about the history of Central Baptist Church of Port Saint Lucie, from our humble beginnings in 1978 to today.",
 };
 
 const timeline = [
@@ -173,10 +173,10 @@ export default function OurStory() {
                 Dr. Nick Manzie has faithfully led Central Baptist Church since
                 2003. He began his ministry as a Chaplain with Christian
                 Motorsports International and has since dedicated his life to
-                serving the Port St. Lucie community.
+                serving the Port Saint Lucie community.
               </p>
               <p className="text-gray-warm leading-relaxed mb-6">
-                Born in Newark, NJ to parents of Puerto Rican and Italian heritage. Married to Jessica with five adult children and four grandchildren. He also serves as Chaplain at the Port St. Lucie Police Department.
+                Born in Newark, NJ to parents of Puerto Rican and Italian heritage. Married to Jessica with five adult children and four grandchildren. He also serves as Chaplain at the Port Saint Lucie Police Department.
               </p>
               <div className="space-y-1 text-sm text-gray-warm">
                 <p>

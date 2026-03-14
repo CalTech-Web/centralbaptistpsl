@@ -8,9 +8,9 @@ import EasterSection from "@/components/EasterSection"; // EASTER SEASON — rem
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Central Baptist Church | Port St. Lucie, FL",
+  title: "Central Baptist Church | Port Saint Lucie, FL",
   description:
-    "Welcome to Central Baptist Church of Port St. Lucie. One Family, Called by Christ, Sent to Serve. Sunday School 9:30 AM, Morning Worship 11:00 AM, Evening Worship 6:00 PM.",
+    "Welcome to Central Baptist Church of Port Saint Lucie. One Family, Called by Christ, Sent to Serve. Sunday School 9:30 AM, Morning Worship 11:00 AM, Evening Worship 6:00 PM.",
 };
 
 export default function Home() {
@@ -247,7 +247,7 @@ export default function Home() {
                   Dr. Nick Manzie has faithfully led Central Baptist Church since
                   2003. He began his ministry as a Chaplain with Christian
                   Motorsports International and has been dedicated to serving the
-                  Port St. Lucie community and guiding our congregation in faith
+                  Port Saint Lucie community and guiding our congregation in faith
                   and worship.
                 </p>
                 <Link
@@ -382,22 +382,15 @@ export default function Home() {
           </div>
           </ScrollReveal>
 
-          {/* Location Card & CTA */}
-          <div className="mt-14 max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="text-dark font-bold block">Central Baptist Church</span>
-                  <span className="text-gray-warm text-sm">1400 SE Lyngate Dr, Port St. Lucie, FL 34952</span>
-                </div>
-              </div>
-            </div>
+          {/* Location & CTA */}
+          <div className="mt-14 text-center">
+            <a href="https://maps.app.goo.gl/WUNtnP58udZRLRLx7" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-warm mb-6 hover:text-primary transition-colors">
+              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span className="text-dark font-semibold">202 SW Tulip Blvd, Port Saint Lucie, FL 34953</span>
+            </a>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"

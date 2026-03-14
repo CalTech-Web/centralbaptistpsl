@@ -106,22 +106,24 @@ export default function ServiceTimesSection({ variant = "light" }: ServiceTimesS
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <p className={`font-semibold mb-1 ${isGreen ? "text-white" : "text-dark"}`}>
-                202 SW Tulip Blvd
-              </p>
-              <p className={`text-sm mb-4 ${isGreen ? "text-white/70" : "text-gray-warm"}`}>
-                Port St. Lucie, FL 34953
-              </p>
               <a
-                href="https://goo.gl/maps/xi48Sdxveus9EhH69"
+                href="https://maps.app.goo.gl/WUNtnP58udZRLRLx7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-light transition-colors"
+                className="block hover:opacity-80 transition-opacity"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-                Open in Google Maps
+                <p className={`font-semibold mb-1 ${isGreen ? "text-white" : "text-dark"}`}>
+                  202 SW Tulip Blvd
+                </p>
+                <p className={`text-sm mb-4 ${isGreen ? "text-white/70" : "text-gray-warm"}`}>
+                  Port Saint Lucie, FL 34953
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-light transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                  Open in Google Maps
+                </span>
               </a>
             </div>
 

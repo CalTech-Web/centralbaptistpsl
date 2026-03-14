@@ -26,7 +26,7 @@ const serviceCards = [
   },
   {
     title: "Volunteerism & Donations",
-    desc: "We provide meaningful opportunities for our members to give back through both their time and resources, supporting local families, individuals, and organizations in the Port St. Lucie community.",
+    desc: "We provide meaningful opportunities for our members to give back through both their time and resources, supporting local families, individuals, and organizations in the Port Saint Lucie community.",
     icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
   },
   {
@@ -95,7 +95,7 @@ export default function CommunityInvolvement() {
             Our Mission
           </span>
           <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-dark mb-5 leading-tight">
-            Serving Port St. Lucie
+            Serving Port Saint Lucie
           </h2>
           <p className="text-lg text-gray-warm leading-relaxed mb-8 max-w-2xl mx-auto">
             Central Baptist Church is dedicated to providing strong community
@@ -217,7 +217,7 @@ export default function CommunityInvolvement() {
             </h2>
             <div className="section-divider mb-6" />
             <p className="text-gray-warm text-lg max-w-2xl mx-auto">
-              A glimpse into how Central Baptist Church serves and connects with the Port St. Lucie community.
+              A glimpse into how Central Baptist Church serves and connects with the Port Saint Lucie community.
             </p>
           </div>
 

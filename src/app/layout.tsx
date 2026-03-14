@@ -19,27 +19,27 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://centralbaptistpsl.com"),
   title: {
-    default: "Central Baptist Church | Port St. Lucie, FL",
+    default: "Central Baptist Church | Port Saint Lucie, FL",
     template: "%s | Central Baptist Church",
   },
   description:
-    "Central Baptist Church of Port St. Lucie - One Family, Called by Christ, Sent to Serve. A multi-ethnic, traditional church with contemporary values. Sunday School 9:30 AM, Worship 11:00 AM.",
+    "Central Baptist Church of Port Saint Lucie - One Family, Called by Christ, Sent to Serve. A multi-ethnic, traditional church with contemporary values. Sunday School 9:30 AM, Worship 11:00 AM.",
   keywords: [
     "Central Baptist Church",
-    "Port St. Lucie church",
+    "Port Saint Lucie church",
     "Baptist church Florida",
     "PSL church",
     "Sunday worship",
     "Bible study",
     "church near me",
   ],
-  authors: [{ name: "Central Baptist Church of Port St. Lucie" }],
+  authors: [{ name: "Central Baptist Church of Port Saint Lucie" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://centralbaptistpsl.com",
     siteName: "Central Baptist Church",
-    title: "Central Baptist Church | Port St. Lucie, FL",
+    title: "Central Baptist Church | Port Saint Lucie, FL",
     description:
       "One Family, Called by Christ, Sent to Serve. Join us for Sunday School at 9:30 AM and Morning Worship at 11:00 AM.",
     images: [
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
         url: "/images/hero-our-story.jpg",
         width: 1200,
         height: 630,
-        alt: "Central Baptist Church of Port St. Lucie",
+        alt: "Central Baptist Church of Port Saint Lucie",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@CentralPSL",
-    title: "Central Baptist Church | Port St. Lucie, FL",
+    title: "Central Baptist Church | Port Saint Lucie, FL",
     description:
       "One Family, Called by Christ, Sent to Serve. Join us for Sunday School at 9:30 AM and Morning Worship at 11:00 AM.",
     images: ["/images/hero-our-story.jpg"],
@@ -72,18 +72,18 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Church",
   name: "Central Baptist Church",
-  alternateName: "Central Baptist Church of Port St. Lucie",
+  alternateName: "Central Baptist Church of Port Saint Lucie",
   url: "https://centralbaptistpsl.com",
   logo: "https://centralbaptistpsl.com/images/Central-Logo-300x182-1.png",
   image: "https://centralbaptistpsl.com/images/hero-our-story.jpg",
   description:
-    "One Family, Called by Christ, Sent to Serve. A multi-ethnic, traditional Baptist church with contemporary values in Port St. Lucie, Florida.",
+    "One Family, Called by Christ, Sent to Serve. A multi-ethnic, traditional Baptist church with contemporary values in Port Saint Lucie, Florida.",
   telephone: "+1-772-237-4907",
   email: "centralbaptist2018@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "202 SW Tulip Blvd",
-    addressLocality: "Port St. Lucie",
+    addressLocality: "Port Saint Lucie",
     addressRegion: "FL",
     postalCode: "34953",
     addressCountry: "US",
@@ -96,7 +96,8 @@ const jsonLd = {
   sameAs: [
     "https://www.youtube.com/channel/UCPj0sGrj03Dymk25ABXXpIQ",
     "https://www.instagram.com/centralbaptistofpsl/",
-    "https://twitter.com/CentralPSL",
+    "https://x.com/CentralPSL",
+    "https://www.facebook.com/centralbaptistchurchpsl",
   ],
   openingHoursSpecification: [
     {
