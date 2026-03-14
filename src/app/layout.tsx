@@ -3,7 +3,6 @@ import { Lora, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import EasterBanner from "@/components/EasterBanner"; // EASTER SEASON — remove after April 12, 2026
 
 const lora = Lora({
   variable: "--font-lora",
@@ -130,7 +129,6 @@ export default function RootLayout({
       </head>
       <body className={`${lora.variable} ${playfair.variable} antialiased`}>
         <Navbar />
-        <EasterBanner /> {/* EASTER SEASON — remove after April 12, 2026 */}
         <main>{children}</main>
         <Footer />
       </body>

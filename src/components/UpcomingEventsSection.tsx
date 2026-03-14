@@ -41,13 +41,6 @@ export default function UpcomingEventsSection() {
             What&apos;s Happening at Central Baptist
           </p>
           <div className="section-divider mb-4" />
-
-          {/* EASTER SEASON — remove after April 12, 2026 */}
-          <blockquote className="text-primary/70 italic text-sm font-[family-name:var(--font-playfair)] mt-2 mb-3">
-            &ldquo;He is not here; he has risen!&rdquo; &mdash;{" "}
-            <cite className="not-italic font-semibold text-primary/80">Luke 24:6</cite>
-          </blockquote>
-
           <p className="text-gray-warm leading-relaxed max-w-2xl mx-auto">
             Join us for exciting events throughout the year! From community outreach
             and fellowship to Bible study and worship, there&apos;s always something
