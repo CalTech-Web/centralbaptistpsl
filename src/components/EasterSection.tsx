@@ -102,6 +102,14 @@ export default function EasterSection() {
 
             {/* HE IS RISEN + arc */}
             <div className="relative select-none text-center">
+              {/* EASTER SUNDAY SERVICE — plain text above HE IS RISEN */}
+              <p
+                className="text-[#7B6BF5] text-[10.5px] md:text-xs font-medium tracking-[0.35em] uppercase mb-4 easter-arc-shine"
+                aria-label="Easter Sunday Service"
+              >
+                EASTER SUNDAY SERVICE
+              </p>
+
               <h3
                 className="text-7xl md:text-8xl lg:text-9xl font-bold font-[family-name:var(--font-playfair)] leading-[0.9] tracking-tight easter-gradient-text"
                 aria-label="He is Risen"
@@ -110,34 +118,6 @@ export default function EasterSection() {
                 <br />
                 RISEN
               </h3>
-
-              {/* EASTER SUNDAY SERVICE arc — upper-right of "IS" */}
-              <div className="absolute -top-[10px] right-[5px] md:-top-[14px] md:right-[0px] w-[140px] h-[180px] md:w-[160px] md:h-[200px] pointer-events-none easter-arc-shine">
-                <svg
-                  viewBox="0 0 140 180"
-                  className="w-full h-full overflow-visible"
-                  aria-label="Easter Sunday Service"
-                >
-                  <defs>
-                    <path
-                      id="easterArc"
-                      d="M 45,20 A 65,65 0 0,1 45,160"
-                      fill="none"
-                    />
-                  </defs>
-                  <text
-                    className="fill-[#7B6BF5]"
-                    fontSize="10.5"
-                    fontWeight="500"
-                    letterSpacing="3.5"
-                    fontFamily="serif"
-                  >
-                    <textPath href="#easterArc" startOffset="0">
-                      EASTER SUNDAY SERVICE
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
             </div>
           </div>
         </div>
