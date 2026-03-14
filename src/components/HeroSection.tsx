@@ -98,6 +98,12 @@ export default function HeroSection() {
               Church
             </h1>
             <div className="section-divider !mx-0 mb-8 animate-fade-in-up-delay" />
+
+            {/* EASTER SEASON — remove after April 12, 2026 */}
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-yellow-200/80 mb-2 animate-fade-in-up-delay">
+              ✝ Easter Season 2026
+            </span>
+
             <p className="text-xl md:text-2xl text-gray-200 italic mb-10 font-[family-name:var(--font-playfair)] animate-fade-in-up-delay-2">
               &ldquo;One Family, Called by Christ, Sent to Serve&rdquo;
             </p>

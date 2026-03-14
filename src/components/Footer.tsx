@@ -12,6 +12,10 @@ export default function Footer() {
             <p className="text-white/80 text-sm italic mb-4">
               &ldquo;One Family, Called by Christ, Sent to Serve&rdquo;
             </p>
+            {/* EASTER SEASON — remove after April 12, 2026 */}
+            <p className="text-white/60 text-xs italic mb-5">
+              ✝ Celebrating the Resurrection of Christ &mdash; Easter 2026
+            </p>
             <p className="text-white/75 text-sm leading-relaxed mb-6">
               A multi-ethnic, traditional church with contemporary values
               serving the Port St. Lucie community since 1978.
