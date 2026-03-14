@@ -272,6 +272,28 @@ html {
   animation: iconFloat 1.5s ease-in-out infinite;
 }
 
+/* ===== EASTER SEASON (remove after April 12, 2026) ===== */
+
+/* "HE IS RISEN" purple-to-pink gradient text */
+.easter-gradient-text {
+  background: linear-gradient(180deg, #7B7BF5 0%, #9B6BF5 35%, #C855D4 60%, #E84BA5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hazard light flash for arc text */
+@keyframes hazardFlash {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.hazard-flash {
+  animation: hazardFlash 1s step-end infinite;
+}
+
+/* ===== END EASTER SEASON ===== */
+
 /* ===== RESPECT REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -4,6 +4,7 @@ import Image from "next/image";
 import LatestSermon from "@/components/LatestSermon";
 import HeroSection from "@/components/HeroSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
+import EasterSection from "@/components/EasterSection"; // EASTER SEASON — remove after April 12, 2026
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -20,6 +21,9 @@ export default function Home() {
 
       {/* Upcoming Events Section */}
       <UpcomingEventsSection />
+
+      {/* Easter Section — EASTER SEASON — remove after April 12, 2026 */}
+      <EasterSection />
 
       {/* Welcome Section - GREEN */}
       <section className="bg-green-section py-20">
